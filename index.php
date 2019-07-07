@@ -2,12 +2,15 @@
 header ("Content-Type: text/html; charset=utf-8");
 // это локалхост-9 авторизация и пагинация в метрике
 require "db.php";
-
+const OPEN_DOORS = '07-07-2019'; // акция
+if (date('d-m-Y') == OPEN_DOORS) {
+	$user=R::findOne('user','login = ?',array('Гость'));
+	$_SESSION['logged_user']=$user;}
 ?>
 
 <!DOCTYPE html> 
 <head>
-	<title>L8 Метрические книги Актуши 1881-1918</title>
+	<title>Метрические книги Актуши 1881-1918</title>
 	<link rel="chortcut icon" type="image/x-icon" href="favicon.ico">
 	<style>
 	tt  {color: gray;}
@@ -52,17 +55,13 @@ require "db.php";
 
 <?php if (isset($_SESSION['logged_user'])):?>
 Привет, <?php echo $_SESSION['logged_user']->login; ?>!
-<a href="/logout.php">Выйти</a><hr><center>
+<?php /*if ($_SESSION['logged_user']->login!='Гость')*/ echo '<a href="/logout.php">Выйти</a>'; ?>
+<hr>
+<center>
 
 <?php
-$super=10; // страниц в турбо режиме
 if (isset($_POST['page'])) {$page=$_POST['page'];} else {$page=0;} 
-if (isset($_POST['pred']))$page--;
-if (isset($_POST['next']))$page++;
-if (isset($_POST['pred2']))$page-=$super;
-if (isset($_POST['next2']))$page+=$super;
-
-//print_r("Страница $page из $num<hr>");
+if (isset($_POST['plus']))$page=$page+(int)$_POST['plus'];  ///    plus
 ?>
 
 <script>
@@ -97,12 +96,7 @@ function f(x,y){
 <b>R</b>-родился; R-родил; r-воспреемник новорожденного; <b>M</b>-вступил в брак; M-родитель новобрачного; m-свидетель на бракосочетании; <b>D</b>-умер; d-родственник умершего.
 <div id="d1" style="width: 80%; height: 350px; overflow: auto; background: #00bfff;  text-align: left;"> 
 <?php
-
-
-
-
-$aaa=array();
-//echo "$page <br>";
+$aaa=array(); //  предбанник
 $d23=array('d2','d3');
 //include('config.php');
 $cu=mysqli_connect(k127001,kroot,kempty,kphote);// коннектикум=mysqli_connect("127.0.0.1","root","","phote");
@@ -123,66 +117,25 @@ if (!$cu){
 	if (isset($_POST['pred3']))$page=0;
 	if (isset($_POST['next3']))$page=$num;	
 	//------------------
-	if (isset($_POST['goto']))$page=(int)$_POST['goto'];
-	
-//--------------------------------
-/*
-	if (isset($_POST['the_v']))$page=19;
-	if (isset($_POST['the_g']))$page=25;
-	if (isset($_POST['the_d']))$page=33;
-	if (isset($_POST['the_e']))$page=39;
-	if (isset($_POST['the_zh']))$page=42;
-	if (isset($_POST['the_z']))$page=43;
-	if (isset($_POST['the_i']))$page=49;
-	if (isset($_POST['the_k']))$page=51;
-	if (isset($_POST['the_l']))$page=74;
-	if (isset($_POST['the_m']))$page=80;
-	if (isset($_POST['the_n']))$page=88;
-	if (isset($_POST['the_o']))$page=92;
-	if (isset($_POST['the_p']))$page=97;
-	if (isset($_POST['the_r']))$page=110;
-	
-	
-	if (isset($_POST['the_s']))$page=113;
-	if (isset($_POST['the_t']))$page=126;
-	if (isset($_POST['the_f']))$page=131;
-	if (isset($_POST['the_h']))$page=140;
-	if (isset($_POST['the_ch']))$page=142;
-	if (isset($_POST['the_sh']))$page=145;
-		*/
-	
-	//$page=($page+$num)%$num;
+	if (isset($_POST['goto']))$page=(int)$_POST['goto'];   // goto
+
 	if ($page<0)$page=0;
 	if ($page>$num)$page=$num;
-	//print_r("num=$num ");print_r(" Страница $page из $num<hr>");
-	
-	
-	
-	
-	
 	$start=$page*$pagesz;
 
    $r=mysqli_query($cu,"SELECT * FROM `gru` ORDER BY `ima` LIMIT ".(int)$start.",".(int)$pagesz); //
 
    //$os=array(749,1714,1890,1956,4917,4928,4984,5133,5175,5551,5599,6429);
-   $os=array(750,1715,1891,1957,4918,4929,4985,5134,5176,5552,5600,6430);
+   //$os=array(750,1715,1891,1957,4918,4929,4985,5134,5176,5552,5600,6430);
    $n=0;
    $p=0;
-   while ($j=mysqli_fetch_assoc($r))
-	   //print_r('mysqli_query($cu,"UPDATE `gru` SET `ima`=\''.$j['ima'].'\' WHERE id='.$j['id'].'");<br>');    
-   
-   {$n++;//print_r("<div class='".." p8' id='di$n'><tt>$n</tt> ".$j['ima']." <font color=#00bfff>id=".$j['id']."</font>");
+   while ($j=mysqli_fetch_assoc($r))   
+   {$n++;//
     $fax='';
    $s8=$j['ima'];
 		if (True){
-			//$p++;
-			//$s2=;//$s2
-			//mysqli_query($cu,"UPDATE `gru` SET `phote`=".$p." WHERE `id`=".$j['id']);
 			if ($j['phote']>0)$fot=mysqli_query($cu,"SELECT * FROM fote WHERE id1=".(int)$j['phote']);//
-			//$fot=mysqli_query($cu,"SELECT * FROM fote WHERE id1=$p");//
 			$zap=mysqli_query($cu,"SELECT * FROM `test` WHERE `g`=".(1+$n)); // взял сущность в которой все записи относящиеся к группе $n
-			
-			//$s4="<font color=red> gru".$j['id']." </font>";
 			$s4="";
 			if ($j['phote']>0){
 			$cfot=mysqli_fetch_assoc($fot);	
@@ -258,18 +211,24 @@ $ki=' style="font-size: 33px;"';
    <p> 
 		<input type="hidden" name="page" <?php echo $ki ?> value=<?php echo "$page" ?>>
 		<button type="submit" name="pred3" <?php echo $ki ?> value="pred3"> 0 </button>
+		<?php /*
 		<button type="submit" name="pred2" <?php echo $ki ?> value="pred2"> << </button>
 		<button type="submit" name="pred" <?php echo $ki ?> value="pred"> < </button>
 		<b><span <?php echo $ki ?>> <?php echo "$page" ?> </span></b>
 		<button type="submit" name="next" <?php echo $ki ?> value="next"> > </button>
 		<button type="submit" name="next2" <?php echo $ki ?> value="next2"> >> </button>
+		*/ ?>
+		<button type="submit" name="plus" <?php echo $ki ?> value="-10"> &lt;&lt </button>
+		<button type="submit" name="plus" <?php echo $ki ?> value="-1"> &lt; </button>
+		<b><span <?php echo $ki ?>> <?php echo "$page" ?> </span></b>
+		<button type="submit" name="plus" <?php echo $ki ?> value="1"> &gt; </button>
+		<button type="submit" name="plus" <?php echo $ki ?> value="10"> &gt;&gt; </button>		
 		<?php /*<button type="submit" name="next3" <?php echo $ki ?> value="next3"> 150 </button>*/ ?>
 		<button type="submit" name="next3" <?php echo $ki ?> value="next3"> <?php echo "$num" ?> </button>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		
 		<button type="submit" name="goto" value="1"> А </button>
-		<button type="submit" name="goto" value="7"> Б </button>
-		
+		<button type="submit" name="goto" value="7"> Б </button>	
 		<button type="submit" name="goto" value="19"> В </button>
 		<button type="submit" name="goto" value="25"> Г </button>
 		<button type="submit" name="goto" value="33"> Д </button>

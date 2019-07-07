@@ -264,6 +264,8 @@ $ki=' style="font-size: 33px;"';
 		<button type="submit" name="next3" <?php echo $ki ?> value="next3"> <?php echo "$num" ?> </button>
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		
+		<button type="submit" name="goto" value="1"> А </button>
+		<button type="submit" name="goto" value="7"> Б </button>
 		
 		<button type="submit" name="the_v" value="the_v"> В </button>
 		<button type="submit" name="the_g" value="the_g"> Г </button>

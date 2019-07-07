@@ -122,31 +122,34 @@ if (!$cu){
 	
 	if (isset($_POST['pred3']))$page=0;
 	if (isset($_POST['next3']))$page=$num;	
+	//------------------
+	if (isset($_POST['goto']))$page=(int)$_POST['goto'];
 	
 //--------------------------------
-	if (isset($_POST['the_v']))$page=20;
+/*
+	if (isset($_POST['the_v']))$page=19;
 	if (isset($_POST['the_g']))$page=25;
-	if (isset($_POST['the_d']))$page=34;
-	if (isset($_POST['the_e']))$page=40;
-	if (isset($_POST['the_zh']))$page=43;
-	if (isset($_POST['the_z']))$page=44;
-	if (isset($_POST['the_i']))$page=50;
-	if (isset($_POST['the_k']))$page=52;
-	if (isset($_POST['the_l']))$page=76;
-	if (isset($_POST['the_m']))$page=81;
-	if (isset($_POST['the_n']))$page=90;
-	if (isset($_POST['the_o']))$page=94;
-	if (isset($_POST['the_p']))$page=100;
-	if (isset($_POST['the_r']))$page=113;
+	if (isset($_POST['the_d']))$page=33;
+	if (isset($_POST['the_e']))$page=39;
+	if (isset($_POST['the_zh']))$page=42;
+	if (isset($_POST['the_z']))$page=43;
+	if (isset($_POST['the_i']))$page=49;
+	if (isset($_POST['the_k']))$page=51;
+	if (isset($_POST['the_l']))$page=74;
+	if (isset($_POST['the_m']))$page=80;
+	if (isset($_POST['the_n']))$page=88;
+	if (isset($_POST['the_o']))$page=92;
+	if (isset($_POST['the_p']))$page=97;
+	if (isset($_POST['the_r']))$page=110;
 	
 	
-	if (isset($_POST['the_s']))$page=116;
-	if (isset($_POST['the_t']))$page=129;
-	if (isset($_POST['the_f']))$page=134;
-	if (isset($_POST['the_h']))$page=145;
-	if (isset($_POST['the_ch']))$page=147;
-	if (isset($_POST['the_sh']))$page=149;
-		
+	if (isset($_POST['the_s']))$page=113;
+	if (isset($_POST['the_t']))$page=126;
+	if (isset($_POST['the_f']))$page=131;
+	if (isset($_POST['the_h']))$page=140;
+	if (isset($_POST['the_ch']))$page=142;
+	if (isset($_POST['the_sh']))$page=145;
+		*/
 	
 	//$page=($page+$num)%$num;
 	if ($page<0)$page=0;
@@ -267,26 +270,26 @@ $ki=' style="font-size: 33px;"';
 		<button type="submit" name="goto" value="1"> А </button>
 		<button type="submit" name="goto" value="7"> Б </button>
 		
-		<button type="submit" name="the_v" value="the_v"> В </button>
-		<button type="submit" name="the_g" value="the_g"> Г </button>
-		<button type="submit" name="the_d" value="the_d"> Д </button>
-		<button type="submit" name="the_e" value="the_e"> Е </button>
-		<button type="submit" name="the_zh" value="the_zh"> Ж </button>
-		<button type="submit" name="the_z" value="the_z"> З </button>
-		<button type="submit" name="the_i" value="the_i"> И </button>
-		<button type="submit" name="the_k" value="the_k"> К </button>
-		<button type="submit" name="the_l" value="the_l"> Л </button>
-		<button type="submit" name="the_m" value="the_m"> М </button>
-		<button type="submit" name="the_n" value="the_n"> Н </button>
-		<button type="submit" name="the_o" value="the_o"> О </button>
-		<button type="submit" name="the_p" value="the_p"> П </button>
-		<button type="submit" name="the_r" value="the_r"> Р </button>
-		<button type="submit" name="the_s" value="the_s"> С </button>
-		<button type="submit" name="the_t" value="the_t"> Т </button>
-		<button type="submit" name="the_f" value="the_f"> Ф </button>
-		<button type="submit" name="the_h" value="the_h"> Х </button>
-		<button type="submit" name="the_ch" value="the_ch"> Ч </button>
-		<button type="submit" name="the_sh" value="the_sh"> Ш </button>		
+		<button type="submit" name="goto" value="19"> В </button>
+		<button type="submit" name="goto" value="25"> Г </button>
+		<button type="submit" name="goto" value="33"> Д </button>
+		<button type="submit" name="goto" value="39"> Е </button>
+		<button type="submit" name="goto" value="42"> Ж </button>
+		<button type="submit" name="goto" value="43"> З </button>
+		<button type="submit" name="goto" value="49"> И </button>
+		<button type="submit" name="goto" value="51"> К </button>
+		<button type="submit" name="goto" value="74"> Л </button>
+		<button type="submit" name="goto" value="80"> М </button>
+		<button type="submit" name="goto" value="88"> Н </button>
+		<button type="submit" name="goto" value="92"> О </button>
+		<button type="submit" name="goto" value="97"> П </button>
+		<button type="submit" name="goto" value="110"> Р </button>
+		<button type="submit" name="goto" value="113"> С </button>
+		<button type="submit" name="goto" value="126"> Т </button>
+		<button type="submit" name="goto" value="131"> Ф </button>
+		<button type="submit" name="goto" value="140"> Х </button>
+		<button type="submit" name="goto" value="142"> Ч </button>
+		<button type="submit" name="goto" value="145"> Ш </button>		
 		
    </p>    
    </form>

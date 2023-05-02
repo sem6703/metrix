@@ -8,7 +8,10 @@ require "db.php";
 <!DOCTYPE html> 
 <head>
 	<title>L8 Метрические книги Актуши 1881-1918</title>
-	<link rel="chortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/x-icon" href=
+"data:image/gif;base64,R0lGODlhEAAQAPcAAPn44v787/775/345/z36P346P757P778f788v367fz66P365f784v725v754v763+LfylpVSqqmkuHevNDNtZ2ZjXRtY15VTl9WU5CKh8bCs+bjx9/XqtK+odW7ldvHk4F7cGNdR///7oeAXiQbCBsRECUbHi8mJSgeHRsSGA4EAEU6JubYsv/8yf/wn+/Tg4h/bt/Xu0s8JSsYHD4uMkM4NDMnJTcuLDIpKSUcHiEUDU47KXpoS+LSof/rnvbWiePWwko9NR8XDyoeJEc8PE9DP1VIRzUpKi0kJhwUCVVKNN7Oq+DRnvLjrPHaofXUkX5uYSwaGj0xKkI4MkxEOzkxLCogHRQFAgAAAEU3IfXov///xv//uf//0KqSafXUj08/Mz0nI0EsMR0LF0IxMy8jFYt7XNm7lNGuhvvfov/2rv3mnPvxoqqUbejIe0EwJEs1MEIpMAQAAIh0ZfTes///yv/np/nGheXCfu/RjP/alfHnk//9w9zLm+DBcks4LkYuLUoxMiELAP//+p6LSM6xYvLBf/68j590UvDIlv/dmO7lj/jysvXotfDRgHNhWDQbJllAQDEaA+vSsbSYaufHndq1lKaAaW5LQs+pePfKgvnhkf/wq/bgp/XVhNfFsTQaIlA1O1AyOlo5PlY1MEosI08uKyoKECEGFX9kU//lrP/vrPfmqu7XnvfXhPDisbynhycMAEorNVo+RmdMSGtTR3BXUmZOUDktLicaIlA4L9O7jf7rt/3nrvbXhe/frNrBnlI1IkEiGkkoK0wqMFQ1Ok8yNzomJgUAAAwAAKaLbv/qwv/krffYhu/Zn//rp//3tP/6wO7Ro6iFYWhEH2A6FmA8GIRmRefMqf//1///yf/ztfzhm/fXg+jOh/fYf/bXdfLSb/vYf//fkf/pnf/0pv/il6qLSv/ppsSnV7WVPvbUfvPUf/XVf+zPf/LRd/LSdffXevLRdfnYfPTTePXTfe7LfaeFPe/PgsOjULiYRvXVgenKcfLSegAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMG/+PPr06pczb+4CRAgRI0iUMHAAQQIFq8uzb+8ESBAhQ4gUMXECRQoVCxg0cPAGTBgxY8iUMXIESRIlK1i0cPEIUCBBgwgVMnMGTRo1S5g0cfIKVChRo0iVMnQIUSJFa9i0cfMMWDBhw4gVM3UKVSpVixg1cvQOXDhx48iVM3YMWTJlq1i1cvUQYECBAwkWNHcOXTp1y5g1c/YSZEiRI0mWNHgQYUKF69i1c/cUaFChQ4kWNXkSZUqVCxk2dPgWbFixY8mWNXoUaVKlK1m2dPkYcGDBgwkXNnsWbVq1S5k2dfoadGjRo0mXLnwYcWLFa9m2dfsceCRw4cOJlzZ9GnVq1YsZN3b8Hnx48ePJFzd+HHly5atZt3b9BAQAOw==">
+	
+	
 	<style>
 	tt  {color: gray;}
 	

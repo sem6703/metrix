@@ -1,0 +1,130 @@
+let a=
+
+
+['? Андрей Васильев',[[ 
+ '1890 Иоанн |as: ? Андрей Васильев',2,2,'numr318d6r',1,'R'],
+],]
+['? Андрей Сергеев',
+	[['1883  |as: ? Андрей Сергеев',4,2,'numr17d1086r',2,'r'],
+	[,,,,,],]
+],
+ 
+ <div class="d2 p8" id="di2"> 
+ <tt>2</tt> <font color="red"> gru3 </font><font color="blue"> *2 </font> 
+ <a class="palec" title="" id="ix3" onclick="fy(this,);">  </a></div>
+
+
+ ['',
+	[,,,,,],
+	[,,,,,],
+],
+ 
+ <div class="d3 p8" id="di3"> <tt>3</tt> <font color="red"> gru4 </font><font color="blue"> *3 </font>? Анна Семенова <a class="palec" title="1883  |as: ? Анна Семенова" id="ix4" onclick="fy(this,1,'numr6d1086r',3);"> <b>R</b> </a></div>
+
+<div class="d2 p8" id="di4"> <tt>4</tt> <font color="red"> gru7 </font><font color="blue"> *4 </font>? Василий Захаров <a class="palec" title="1908  |as: ? Василий Захаров" id="ix7" onclick="fy(this,4,'numr57d8m',4);"> m </a></div>
+
+<div class="d3 p8" id="di5"> <tt>5</tt> <font color="red"> gru12 </font><font color="blue"> *5 </font>? Дарья ? <a class="palec" title="1883  |as: ? Дарья ?" id="ix12" onclick="fy(this,5,'numr20d1086r',5);"> r </a></div>
+
+<div class="d2 p8" id="di6"> <tt>6</tt> <font color="red"> gru13 </font><font color="blue"> *6 </font>? Дарья Ф? <a class="palec" title="1883  |as: ? Дарья ф?" id="ix13" onclick="fy(this,5,'numr22d1086r',6);"> r </a></div>
+
+<div class="d3 p8" id="di7"> <tt>7</tt> <font color="red"> gru14 </font><font color="blue"> *7 </font>? Евдокия ? <a class="palec" title="1905 Татьяна |as: ? Евдокия ?" id="ix14" onclick="fy(this,3,'numr2p1905r',7);"> R </a></div>
+
+<div class="d2 p8" id="di8"> <tt>8</tt> <font color="red"> gru17 </font><font color="blue"> *8 </font>? Егор Иванов <a class="palec" title="1885 Марья |as: ? Егор Иванов" id="ix17" onclick="fy(this,2,'numr622d6r',8);"> R </a></div>
+
+<div class="d3 p8" id="di9"> <tt>9</tt> <font color="red"> gru19 </font><font color="blue"> *9 </font>? Екатерина Иванова <a class="palec" title="1882 Федор |as: ? Екатерина Иванова" id="ix19" onclick="fy(this,3,'numr711d6r',9);"> R </a></div>
+
+<div class="d2 p8" id="di10"> <tt>10</tt> <font color="red"> gru21 </font><font color="blue"> *10 </font>? Ефимия Тимофеева <a class="palec" title="1883  |as: ? Ефимия Тимофеева" id="ix21" onclick="fy(this,5,'numr0d1086r',10);"> r </a></div>
+
+<div class="d3 p8" id="di11"> <tt>11</tt> <font color="red"> gru26 </font><font color="blue"> *11 </font>? Иван Андреев <a class="palec" title="1890  |as: ? Иоанн Андреев" id="ix26" onclick="fy(this,1,'numr318d6r',11);"> <b>R</b> </a></div>
+
+<div class="d2 p8" id="di12"> <tt>12</tt> <font color="red"> gru25 </font><font color="blue"> *12 </font>? Игнатий Осипов <a class="palec" title="1883 Марфа Петрова |as: ? Игнатий Осипов" id="ix25" onclick="fy(this,1,'numr19d1086d',12);"> d </a></div>
+
+<div class="d3 p8" id="di13"> <tt>13</tt> <font color="red"> gru29 </font><font color="blue"> *13 </font>? Константин Максимов <a class="palec" title="1883 Марфа |as: ? Константин Максимов" id="ix29" onclick="fy(this,2,'numr13d1086m',13);"> M </a></div>
+
+<div class="d2 p8" id="di14"> <tt>14</tt> <font color="red"> gru31 </font><font color="blue"> *14 </font>? Марфа Константинова <a class="palec" title="1883 Захлестин Егор |as: ? Марфа Константинова" id="ix31" onclick="fy(this,3,'numr13d1086m',14);" style="background-color: transparent;"> <b>M</b> </a></div>
+
+<div class="d3 p8" id="di15"> <tt>15</tt> <font color="red"> gru32 </font><font color="blue"> *15 </font>? Марфа Петрова <a class="palec" title="1883  |as: ? Марфа Петрова" id="ix32" onclick="fy(this,2,'numr19d1086d',15);"> <b>D</b> </a></div>
+
+<div class="d2 p8" id="di16"> <tt>16</tt> <font color="red"> gru34 </font><font color="blue"> *16 </font>? Михаил Иванов <a class="palec" title="1883  |as: ? Михаил Иванов" id="ix35" onclick="fy(this,4,'numr21d1086r',16);"> r </a> <a class="palec" title="1884  |as: ? Михаил Иванов" id="ix34" onclick="fy(this,4,'numr41p1884r',16);"> r </a></div>
+
+<div class="d3 p8" id="di17"> <tt>17</tt> <font color="red"> gru36 </font><font color="blue"> *17 </font>? Моисей Васильев <a class="palec" title="1883  |as: ? Моисей Васильев" id="ix36" onclick="fy(this,5,'numr0d1086m',17);"> m </a></div>
+
+<div class="d2 p8" id="di18"> <tt>18</tt> <font color="red"> gru37 </font><font color="blue"> *18 </font>? Надежда Дмитриева <a class="palec" title="1909  |as: ? Надежда Дмитриева" id="ix37" onclick="fy(this,5,'numr233d8r',18);"> r </a></div>
+
+<div class="d3 p8" id="di19"> <tt>19</tt> <font color="red"> gru38 </font><font color="blue"> *19 </font>? Надежда Федорова <a class="palec" title="1883  |as: ? Надежда Федорова" id="ix38" onclick="fy(this,1,'numr13d1086d',19);"> <b>D</b> </a></div>
+
+<div class="d2 p8" id="di20"> <tt>20</tt> <font color="red"> gru39 </font><font color="blue"> *20 </font>? Наталья Семенова? <a class="palec" title="1883 Глухов Федор |as: ? Наталья Семенова?" id="ix39" onclick="fy(this,3,'numr1d1086m',20);"> <b>M</b> </a></div>
+
+<div class="d3 p8" id="di21"> <tt>21</tt> <font color="red"> gru41 </font><font color="blue"> *21 </font>? Николай Павлов <a class="palec" title="1914  |as: ? Николай Павлов" id="ix41" onclick="fy(this,2,'numr16d8d',21);"> <b>D</b> </a></div>
+
+<div class="d2 p8" id="di22"> <tt>22</tt> <font color="red"> gru42 </font><font color="blue"> *22 </font>? Николай Тихонов <a class="palec" title="1908  |as: ? Николай Тихонов" id="ix42" onclick="fy(this,5,'numr56d8m',22);"> m </a></div>
+
+<div class="d3 p8" id="di23"> <tt>23</tt> <font color="red"> gru43 </font><font color="blue"> *23 </font>? Николай Фадеев <a class="palec" title="1884  |as: ? Николай Фаддеев" id="ix43" onclick="fy(this,2,'numr87p1885d',23);"> <b>D</b> </a></div>
+
+<div class="d2 p8" id="di24"> <tt>24</tt> <font color="red"> gru46 </font><font color="blue"> *24 </font>? Пелагея Филиппова <a class="palec" title="1885 Иоанн и Стефан |as: ? Пелагея Филиппова" id="ix46" onclick="fy(this,4,'numr635d6r',24);"> R </a></div>
+
+<div class="d3 p8" id="di25"> <tt>25</tt> <font color="red"> gru47 </font><font color="blue"> *25 </font>? Пераскева Васильева <a class="palec" title="1897 Минеев Андрей |as: ? Пераскева Васильева" id="ix47" onclick="fy(this,3,'numr78d7m',25);"> <b>M</b> </a></div>
+
+<div class="d2 p8" id="di26"> <tt>26</tt> <font color="red"> gru49 </font><font color="blue"> *26 </font>? Пераскева Иванова <a class="palec" title="1884  |as: ? Праскева Иванова" id="ix49" onclick="fy(this,5,'numr41p1884r',26);"> r </a></div>
+
+<div class="d3 p8" id="di27"> <tt>27</tt> <font color="red"> gru48 </font><font color="blue"> *27 </font>? Петр Егоров <a class="palec" title="1914  |as: ? Петр Егоров" id="ix48" onclick="fy(this,5,'numr12d8m',27);"> m </a></div>
+
+<div class="d2 p8" id="di28"> <tt>28</tt> <font color="red"> gru50 </font><font color="blue"> *28 </font>? Роман Гаврилов <a class="palec" title="1918  |as: ? Роман Гаврилов" id="ix50" onclick="fy(this,4,'numr168p1915r',28);"> r </a></div>
+
+<div class="d3 p8" id="di29"> <tt>29</tt> <font color="red"> gru51 </font><font color="blue"> *29 </font>? Семен Ва? <a class="palec" title="1905 Татьяна |as: ? Семен ва?" id="ix51" onclick="fy(this,2,'numr2p1905r',29);"> R </a></div>
+
+<div class="d2 p8" id="di30"> <tt>30</tt> <font color="red"> gru52 </font><font color="blue"> *30 </font>? Семен Васильев <a class="palec" title="1883  |as: ? Семен Васильев" id="ix52" onclick="fy(this,6,'numr51d1086r',30);"> r </a></div>
+
+<div class="d3 p8" id="di31"> <tt>31</tt> <font color="red"> gru53 </font><font color="blue"> *31 </font>? Семен Степанов <a class="palec" title="1883 Анна |as: ? Семен Стефанов" id="ix53" onclick="fy(this,2,'numr6d1086r',31);"> R </a></div>
+
+<div class="d2 p8" id="di32"> <tt>32</tt> <font color="red"> gru54 </font><font color="blue"> *32 </font>? Семен? Иванов <a class="palec" title="1883 Наталья |as: ? Семен? Иванов" id="ix54" onclick="fy(this,2,'numr1d1086m',32);"> M </a></div>
+
+<div class="d3 p8" id="di33"> <tt>33</tt> <font color="red"> gru55 </font><font color="blue"> *33 </font>? Степан Герасимов <a class="palec" title="1885 Иван |as: ? Стефан Герасимов" id="ix55" onclick="fy(this,1,'numr23p1885d',33);"> d </a> <a class="palec" title="1885 Иоанн и Стефан |as: ? Стефан Герасимов?" id="ix56" onclick="fy(this,3,'numr635d6r',33);"> R </a></div>
+
+<div class="d2 p8" id="di34"> <tt>34</tt> <font color="red"> gru58 </font><font color="blue"> *34 </font>? Татьяна Семенова <a class="palec" title="1905  |as: ? Татьяна Семенова" id="ix58" onclick="fy(this,1,'numr2p1905r',34);"> <b>R</b> </a></div>
+
+<div class="d3 p8" id="di35"> <tt>35</tt> <font color="red"> gru59 </font><font color="blue"> *35 </font>? Татьяна Филиппова <a class="palec" title="1885  |as: ? Татьяна Филиппова" id="ix59" onclick="fy(this,2,'numr8p1885d',35);"> <b>D</b> </a></div>
+
+<div class="d2 p8" id="di36"> <tt>36</tt> <font color="red"> gru60 </font><font color="blue"> *36 </font>? Тимофей Степанов <a class="palec" title="1883 Евдокия |as: ? Тимофей Степанов" id="ix60" onclick="fy(this,2,'numr16d1086r',36);"> R </a></div>
+
+<div class="d3 p8" id="di37"> <tt>37</tt> <font color="red"> gru62 </font><font color="blue"> *37 </font>? Федор Никифоров <a class="palec" title="1914  |as: ? Федор Никифоров" id="ix62" onclick="fy(this,4,'numr48d8r',37);"> r </a></div>
+
+<div class="d2 p8" id="di38"> <tt>38</tt> <font color="red"> gru63 </font><font color="blue"> *38 </font>? Феодосия Васильева <a class="palec" title="1883 Анна |as: ? Феодосия Васильева" id="ix63" onclick="fy(this,3,'numr6d1086r',38);"> R </a></div>
+
+<div class="d3 p8" id="di39"> <tt>39</tt> <font color="red"> gru64 </font><font color="blue"> *39 </font>? Филипп Степанов <a class="palec" title="1885 Татьяна |as: ? Филипп Стефанов" id="ix64" onclick="fy(this,1,'numr8p1885d',39);"> d </a></div>
+
+<div class="d2 p8" id="di40"> <tt>40</tt> <font color="red"> gru66 </font><font color="blue"> *40 </font>?А Евдокия Тимофеева <a class="palec" title="1883  |as: ?а Евдокия Тимофеева" id="ix66" onclick="fy(this,1,'numr16d1086r',40);"> <b>R</b> </a></div>
+
+<div class="d3 p8" id="di41"> <tt>41</tt> <font color="red"> gru67 </font><font color="blue"> *41 </font>?А Екатерина Васильева <a class="palec" title="1883 Евдокия |as: ?а Екатерина Васильева" id="ix67" onclick="fy(this,3,'numr16d1086r',41);"> R </a></div>
+
+<div class="d2 p8" id="di42"> <tt>42</tt> <font color="red"> gru68 </font><font color="blue"> *42 </font>?А Ксения Иванова <a class="palec" title="1885 Марья |as: ?а Ксения Иванова" id="ix68" onclick="fy(this,3,'numr622d6r',42);"> R </a></div>
+
+<div class="d3 p8" id="di43"> <tt>43</tt> <font color="red"> gru69 </font><font color="blue"> *43 </font>?А Мария Егорова <a class="palec" title="1885  |as: ?а Марья Егорова" id="ix69" onclick="fy(this,1,'numr622d6r',43);"> <b>R</b> </a></div>
+
+<div class="d2 p8" id="di44"> <tt>44</tt> <font color="red"> gru77 </font><font color="blue"> *44 </font>?молаева Пераскева Тимофеева <a class="palec" title="1905  |as: ?молаева Параскева Тимофеева" id="ix77" onclick="fy(this,5,'numr2p1905r',44);"> r </a></div>
+
+<div class="d3 p8" id="di45"> <tt>45</tt> <font color="red"> gru78 </font><font color="blue"> *45 </font>?ов Андрей Васильев <a class="palec" title="1882 Матрона |as: ?ов Андрей Васильев" id="ix78" onclick="fy(this,2,'numr724d6r',45);"> R </a></div>
+
+<div class="d2 p8" id="di46"> <tt>46</tt> <font color="red"> gru79 </font><font color="blue"> *46 </font>?ова Мария Васильева <a class="palec" title="1882 Матрона |as: ?ова Марья Васильева" id="ix79" onclick="fy(this,3,'numr724d6r',46);"> R </a></div>
+
+<div class="d3 p8" id="di47"> <tt>47</tt> <font color="red"> gru80 </font><font color="blue"> *47 </font>?ова Матрона Андреева <a class="palec" title="1882  |as: ?ова Матрона Андреева" id="ix80" onclick="fy(this,1,'numr724d6r',47);"> <b>R</b> </a></div>
+
+<div class="d2 p8" id="di48"> <tt>48</tt> <font color="red"> gru81 </font><font color="blue"> *48 </font>?Стев Корнилий ? <a class="palec" title="1884 Екатерина |as: ?стев Корнилий ?" id="ix81" onclick="fy(this,2,'numr25p1885m',48);"> M </a></div>
+
+<div class="d3 p8" id="di49"> <tt>49</tt> <font color="red"> gru82 </font><font color="blue"> *49 </font>?Стева Екатерина Корнилова <a class="palec" title="1884 Орлов Иван |as: ?стева Екатерина Корнилова" id="ix82" onclick="fy(this,3,'numr25p1885m',49);"> <b>M</b> </a></div>
+
+
+ 
+ 
+ <div class="d2 p8" id="di50"> 
+	 <tt>50</tt> 
+	 <font color="red"> gru83 </font>
+	 <font color="blue"> *50 </font>
+	 ?Ф? Федор Иванов 
+	 <a class="palec" title="1883 Евдокия |as: ?ф? Федор Иванов" id="ix83" onclick="fy(this,2,'numr12d1086r',50);"> R </a>
+ </div>
+ 
+ 
+ <script>var v=document.getElementById(curxx); if (!!v) v.classList.add('acti');</script>
+ 
+ </div>

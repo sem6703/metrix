@@ -30,6 +30,8 @@ mark{}
 .a:has(mark){text-decoration: none;}
 .a{text-decoration: underline; text-decoration-color: green;}
 label{padding: 0 0 0 12px;}
+mark{background: springgreen;}
+.nom{text-decoration: underline;cursor: pointer;}
   </style>  
 </head>
 <body text="black" bgcolor="white">
@@ -63,27 +65,10 @@ label{padding: 0 0 0 12px;}
 	"></div>
 	</div>
 
-	 <div id="aj2" style="margin:44px auto 0;padding: 15px 0;width:90%;background: white;border-radius: 12px;">
-		<div class="d3 p8" id="di3"> <tt>3</tt> <span style="color:red"> gru4076 </span><span style="color:blue"> *3 </span>
-		<span onclick="fy(this,3, 'numr202d7r',3);" style="text-decoration: underline;cursor: pointer;">Лякина Пераскева Андреева</span> 
-		<label>
-		 <a class="palec" title="1899 Анна |as: Лякина Пераскева Андреева" id="ix9798" onclick="fy(this,3, 'numr202d7r',3);"><b>R</b></a>
-		 <a class="palec" title="1900 Васса |as: Лякина Пераскева Андреева" id="ix9799" onclick="fy(this,3, 'numr62d7r',3);"><b>R</b></a>
-		 <a class="palec" title="1902 Анна |as: Лякина Пераскева Андреева" id="ix9800" onclick="fy(this,3, 'numr660d8r',3);"><b>R</b></a>
-		 <a class="palec" title="1903 Василий |as: Лякина Пераскева Андреева" id="ix9801" onclick="fy(this,3, 'numr588d8r',3);"><b>R</b></a>
-		 <a class="palec" title="1905  |as: Лякина Пераскева Андреева" id="ix9802" onclick="fy(this,5, 'numr37p1905r',3);"><b>r</b></a>
-		 <a class="palec" title="1907 Петр |as: Лякина Параскева Андреева" id="ix9803" onclick="fy(this,3, 'numr136p1905r',3);"><b>R</b></a>
-		 <a class="palec" title="1909 Анна |as: Лякина Пераскева Андреева" id="ix9804" onclick="fy(this,3, 'numr283d8r',3);"><b>R</b></a>
-		 <a class="palec" title="1911 Александр |as: Лякина Пераскева Андреева" id="ix9805" onclick="fy(this,3, 'numr284p1905r',3);"><b>R</b></a>
-		 <a class="palec" title="1912   |as: Лякина Пераскева Андреева" id="ix9806" onclick="fy(this,3, 'numr185d8r',3);"><b>R</b></a>
-		</label> 
-		</div>
-	</div>
 	
-
 	 <div id="aj25" style="margin:44px auto 0;padding: 15px 0;width:90%;background: white;border-radius: 12px;">
 		<div class="d3 p8" id="di3"> <tt>3. </tt> 
-		<span onclick="fy(this,3, 'numr202d7r',3);" style="text-decoration: underline;cursor: pointer;">Лякина Пераскева Андреева</span> 
+		<span onclick="fy(this,3, 'numr202d7r',3);" class="nom">Лякина Пераскева Андреева</span> 
 		<label>
 		 <a class="palec" title="1899 Анна |as: Лякина Пераскева Андреева" id="ix9798" onclick="fy(this,3, 'numr202d7r',3);"><b>R</b></a>
 		 <a class="palec" title="1900 Васса |as: Лякина Пераскева Андреева" id="ix9799" onclick="fy(this,3, 'numr62d7r',3);"><b>R</b></a>
@@ -309,9 +294,9 @@ a.map((x,i)=>
 
  '<div class="d3 p8" id="di'+i+// номер на листе
  '"> <tt>'+(50*n+i)+// номер группы п/п
- '</tt> <font color="red"> gru'+x[0]+// номер группы в базе
- ' </font><font color="blue"> *'+i+// номер на листе
- ' </font>'+x[1]+// имя группы ? Анна Семенова+
+ '. </tt> '+// номер группы в базе
+ '<span onclick="fy(this,'+x[2][0][2]+', \'numr'+x[2][0][3]+x[2][0][4]+'\','+i+');" class="nom">'+
+ x[1]+'</span>'+// имя группы ? Анна Семенова+
  '<label>'+ 
  x[2].map((y,j)=>
 	 ' <a class="palec" title="'+y[0]+//титл акта 1883  |as: ? Анна Семенова+
@@ -319,8 +304,9 @@ a.map((x,i)=>
 	 '" onclick="fy(this,'+y[2]+ // номер света
 	 ', \'numr'+y[3]+y[4]+ // имя книгиnumr6d1086r+
 	 '\','+i+ // номер на листе
-	 ');"><b>'+y[5]+// событиеR+
-	 '</b></a>\n'
+	 ');">'+
+	 ((Math.random()<0.5)?(y[5]):('<b>'+y[5]+'</b>'))+	// событиеR+ 
+	 '</a>\n'
 	 ).join('')+//&#8198;&#8200;
  '</label>'+  
  '</div>\n'

@@ -1,130 +1,124 @@
-<table cellspacing="0"><tbody>		
-		<tr>
-		<td bgcolor="#efefff" class="ileft">
-		Скрин<br>
-		</td>
-		<td class="ihead">Счет браков</td>
-		<td class="ihead">Месяц и день</td>
-		<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание жениха, и которым браком</td>
-		<td class="ihead">Лета жениха</td>
-		<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание невесты, и которым браком</td>
-		<td class="ihead">Лета невесты</td>
-		<td class="ihead">Кто был поручителем</td>
-		</tr>
+		<table cellspacing="0">
+			<tbody>
+				<tr>
+				<td rowspan="2" bgcolor="#efefff" class="ileft">
+				Скрин
+				</td>
+				<td colspan="2" class="ihead">Счет рожд.</td>
+				<td colspan="2" class="ihead">Месяц и день</td>
+				<td rowspan="2" class="ihead">Имена родившихся</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия родителей и какого вероисповедания</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия восприемников</td>
+				</tr>
+				<tr>
+				<td class="ihead">Муж.</td>
+				<td class="ihead">Жен.</td>
+				<td class="ihead">Рождение</td>
+				<td class="ihead">Крещение<br></td>
+				</tr>
+				<tr>
+				<td bgcolor="white" class="icenter">
+				<a href="old-ruf.jpg" target="_blank" style="cursor: pointer;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+				  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+				  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
+				</svg></a><br>
+				</td>
+				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>
+				<td><span class="vo" onclick="fj('jx26', 1, 'numr318d6r',11,0);"><mark>Иоанн</mark></span><br></td>
+				<td class="ileft">
+				Деревни Климовки крестьянин<br>
+				<span class="a" onclick="fj('jx2', 2, 'numr318d6r',1,0);">Андрей Васильев ?</span><br>
+				и законная жена его<br>
+				<span class="a" onclick="fj('jx20', 3, 'numr318d6r',4,1);">Екатерина Николаева</span><br>
+				оба православные<br>
+				</td><td class="ileft">
+				Деревни Климовки крестьянин <span class="a" onclick="fj('jx18377', 4, 'numr465d8r',21,142);">Василий Терентьев Чарыгин</span><br>
+				крестьянская девица <span class="a" onclick="fj('jx18416', 5, 'numr465d8r',47,142);">Пелагея Григорьева Чарыгина</span></td></tr>
+			</tbody>
+		</table>	
+	
+	
+	
+//******************************************	
+	
+	
+		<table cellspacing="0">
+			<tbody>
+				<tr>
+				<td bgcolor="#efefff" class="ileft">
+				Скрин<br>
+				</td>
+				<td class="ihead">Счет браков</td>
+				<td class="ihead">Месяц и день</td>
+				<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание жениха, и которым браком</td>
+				<td class="ihead">Лета жениха</td>
+				<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание невесты, и которым браком</td>
+				<td class="ihead">Лета невесты</td>
+				<td class="ihead">Кто был поручителем</td>
+				</tr>
+				<tr><td bgcolor="white" class="icenter">
+				<a href="old-ruf.jpg" target="_blank" style="cursor: pointer;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+		  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+		  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+				</svg></a><br>				
+				</td><td>15</td><td><b> 10 нояб 1914</b></td><td class="ileft">
+				села Актуши крестьянин
+				<h4><span class="a" onclick="fj('jx12886', 1, 'numr14d8m',32,101);">Сергей Степанов Плясунов</span></h4>
+				православного вероисповедания, 
+				первым браком
+				</td><td>
+				<h2>18</h2>p.1896</td><td class="ileft">
+				временно-проживающая в селе Усолье крестьянская девица
+				<h4><span class="a" onclick="fj('jx786', 2, 'numr14d8m',42,6);">Мария Павлова Юрасова она же Архиерева</span></h4>
+				православного вероисповедания, 
+				первым браком
+				</td><td><h2>16</h2>p.1897</td><td class="ileft">
+				<strong>по жениху:</strong>
+				села Актуши крестьяне <span class="a" onclick="fj('jx18732', 2, 'numr14d8m',27,147);"><mark>Иван Панкратов Лазарев</mark></span><br>
+				<span class="a" onclick="fj('jx9277', 3, 'numr14d8m',10,75);">Павел Андреев Федосеев</span><br>
+				<strong>по невесте:</strong>
+				села Актуши крестьяне <span class="a" onclick="fj('jx17303', 4, 'numr14d8m',17,134);">Андрей Петров Федосеев</span><br>
+				<span class="a" onclick="fj('jx16885', 5, 'numr14d8m',37,132);">Иван Дмитриев Агафонов</span><br>
+				</td></tr>
+			</tbody>
+		</table>	
 		
-		<tr><td bgcolor="white" class="icenter">
-		<a href="old-ruf.jpg" target="_blank" style="cursor: pointer;">
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
-</svg></a><br>
-		
-		</td><td>15</td><td><b> 10 нояб 1914</b></td><td class="ileft">
-		села Актуши крестьянин
-		<h4><span class="a" onclick="fj('jx12886', 1, 'numr14d8m',32,101);">Сергей Степанов Плясунов</span></h4>
-		православного вероисповедания, 
-		первым браком
-		</td><td>
-		<h2>18</h2>p.1896</td><td class="ileft">
-		временно-проживающая в селе Усолье крестьянская девица
-		<h4><span class="a" onclick="fj('jx786', 2, 'numr14d8m',42,6);">Мария Павлова Юрасова она же Архиерева</span></h4>
-		православного вероисповедания, 
-		первым браком
-		</td><td><h2>16</h2>p.1897</td><td class="ileft">
-		<strong>по жениху:</strong>
-		села Актуши крестьяне <span class="a" onclick="fj('jx18732', 2, 'numr14d8m',27,147);"><mark>Иван Панкратов Лазарев</mark></span><br>
-		<span class="a" onclick="fj('jx9277', 3, 'numr14d8m',10,75);">Павел Андреев Федосеев</span><br>
-		<strong>по невесте:</strong>
-		села Актуши крестьяне <span class="a" onclick="fj('jx17303', 4, 'numr14d8m',17,134);">Андрей Петров Федосеев</span><br>
-		<span class="a" onclick="fj('jx16885', 5, 'numr14d8m',37,132);">Иван Дмитриев Агафонов</span><br>
-		</td></tr>
-		</tbody>
-		</table>
-		
-<table cellspacing="0"><tbody>
-		
-		<tr>
-		<td bgcolor="#efefff" class="ileft">
-		Скрин<br>
-		</td>
-		<td class="ihead">Счет браков</td>
-		<td class="ihead">Месяц и день</td>
-		<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание жениха, и которым браком</td>
-		<td class="ihead">Лета жениха</td>
-		<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание невесты, и которым браком</td>
-		<td class="ihead">Лета невесты</td>
-		<td class="ihead">Кто был поручителем</td>
-		</tr>
-		
-		<tr><td bgcolor="white" class="icenter">
-		<a href="old-ruf.jpg" target="_blank" style="cursor: pointer;">
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
-</svg></a><br>
-		
-		</td><td>15</td><td><b> 10 нояб 1914</b></td><td class="ileft">
-		села Актуши крестьянин
-		<h4><span class="a" onclick="fj('jx12886', 1, 'numr14d8m',32,101);">Сергей Степанов Плясунов</span></h4>
-		православного вероисповедания, 
-		первым браком
-		</td><td>
-		<h2>18</h2>p.1896</td><td class="ileft">
-		временно-проживающая в селе Усолье крестьянская девица
-		<h4><span class="a" onclick="fj('jx786', 2, 'numr14d8m',42,6);">Мария Павлова Юрасова она же Архиерева</span></h4>
-		православного вероисповедания, 
-		первым браком
-		</td><td><h2>16</h2>p.1897</td><td class="ileft">
-		<strong>по жениху:</strong>
-		села Актуши крестьяне <span class="a" onclick="fj('jx18732', 2, 'numr14d8m',27,147);"><mark>Иван Панкратов Лазарев</mark></span><br>
-		<span class="a" onclick="fj('jx9277', 3, 'numr14d8m',10,75);">Павел Андреев Федосеев</span><br>
-		<strong>по невесте:</strong>
-		села Актуши крестьяне <span class="a" onclick="fj('jx17303', 4, 'numr14d8m',17,134);">Андрей Петров Федосеев</span><br>
-		<span class="a" onclick="fj('jx16885', 5, 'numr14d8m',37,132);">Иван Дмитриев Агафонов</span><br>
-		</td></tr>
-		</tbody>
-		</table>
-
-<table cellspacing="0"><tbody>
-		
-		<tr>
-		<td bgcolor="#efefff" class="ileft">
-		Скрин<br>
-		</td>
-		<td class="ihead">Счет браков</td>
-		<td class="ihead">Месяц и день</td>
-		<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание жениха, и которым браком</td>
-		<td class="ihead">Лета жениха</td>
-		<td class="ihead">Звание, имя, отчество, фамилия и вероисповедание невесты, и которым браком</td>
-		<td class="ihead">Лета невесты</td>
-		<td class="ihead">Кто был поручителем</td>
-		</tr>
-		
-		<tr><td bgcolor="white" class="icenter">
-		<a href="old-ruf.jpg" target="_blank" style="cursor: pointer;">
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
-  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
-</svg></a><br>
-		
-		</td><td>15</td><td><b> 10 нояб 1914</b></td><td class="ileft">
-		села Актуши крестьянин
-		<h4><span class="a" onclick="fj('jx12886', 1, 'numr14d8m',32,101);">овен</span></h4>
-		православного вероисповедания, 
-		первым браком
-		</td><td>
-		<h2>18</h2>p.1896</td><td class="ileft">
-		временно-проживающая в селе Усолье крестьянская девица
-		<h4><span class="a" onclick="fj('jx786', 2, 'numr14d8m',42,6);">Мария Павлова Юрасова она же Архиерева</span></h4>
-		православного вероисповедания, 
-		первым браком
-		</td><td><h2>16</h2>p.1897</td><td class="ileft">
-		<strong>по жениху:</strong>
-		села Актуши крестьяне <span class="a" onclick="fj('jx18732', 2, 'numr14d8m',27,147);"><mark>Иван Панкратов Лазарев</mark></span><br>
-		<span class="a" onclick="fj('jx9277', 3, 'numr14d8m',10,75);">Павел Андреев Федосеев</span><br>
-		<strong>по невесте:</strong>
-		села Актуши крестьяне <span class="a" onclick="fj('jx17303', 4, 'numr14d8m',17,134);">Андрей Петров Федосеев</span><br>
-		<span class="a" onclick="fj('jx16885', 5, 'numr14d8m',37,132);">Иван Дмитриев Агафонов</span><br>
-		</td></tr>
-		</tbody>
+//***************************************		
+		<table cellspacing="0">
+			<tbody><tr>
+				<td rowspan="2" bgcolor="#efefff" class="ileft">
+				Скрин
+				</td>
+				<td colspan="2" class="ihead">Счет умерших</td>
+				<td colspan="2" class="ihead">Месяц и день</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия умершего</td>
+				<td colspan="2" class="ihead">Лета умершего</td>
+				<td rowspan="2" class="ihead">От чего умер</td>
+				</tr>
+				<tr>
+				<td class="ihead">Муж</td>
+				<td class="ihead">Жен</td>
+				<td class="ihead">Смерти</td>
+				<td class="ihead">Погребения</td>
+				<td class="ihead">Муж </td>
+				<td class="ihead">Жен<br></td>
+				</tr>
+				<tr><td bgcolor="white" class="icenter">
+					<a href="old-ruf.jpg" target="_blank" style="cursor: pointer;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+				  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+				  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
+						</svg>
+					</a></td>
+				<td></td><td>29</td><td>4 сент 1900</td><td>6</td><td class="ileft">
+				д Климовки билетного солдата<br>
+				<span class="a" onclick="fj('jx18395', 1, 'numr61d7d',32,142);">Николая Никанорова Чарыгина</span><br>
+				дочь<br>
+				<span class="vo"><span class="a" onclick="fj('jx18407', 2, 'numr61d7d',40,142);"><mark>Евдокия</mark></span></span><br>
+				</td><td></td><td><span class="vo">1г2м</span></td><td>от коклюша<br><br></td></tr>
+			</tbody>
 		</table>		
+
+

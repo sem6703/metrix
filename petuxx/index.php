@@ -86,6 +86,7 @@ table{width: 100%;
 		}
 [color='red']{display: none}
 [color='blue']{display: none}
+img{transform:translate(0,2px)}
 
 	</style>
 <script src="jq/jquery-2.1.0.min.js"></script>
@@ -116,6 +117,8 @@ var curxx='i';// в списе подсвеченный эл
 var levmax=<?php echo "$num" ?>;// страниц в базе групп
 var oldxx=0;
 function fy(x,n,s,e){
+	
+	//alert(x,' ',n,' ',s,' ',e);
 	//$('#ajx2').load('goat.php?i='+n+'&t='+s);// табла
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// табла
 	$('#ajx1').load('spis.php?k=1&e='+e+'&pg='+lev+'&id='
@@ -190,16 +193,7 @@ function fj(y,n,s,e,pig){//из бани
 <div id="ajx0"> o</div>
 
 <script>
-function leventer(){//текущая страница списа (лев)
-//alert('xa'+lev+'xa'+levmax+'xa');
-	$('#ajx3').load('lev.php?k='+lev);//num.innerHTML='lev';
-	//$('#ajx0').load('spis.php?k=50&pg='+lev);
-	$('#ajx0').load('spis.php?k=5&pg='+lev);
-	}
 
-var lev=0;// страница ноль
-
-leventer();
 </script>
 
 <?php
@@ -212,7 +206,7 @@ leventer();
 <button onclick="lev=0;leventer();"> 0 </button>
 <button onclick="lev=(lev>9)?(lev-10):0;leventer();"> &lt;&lt; </button>
 <button onclick="lev=(lev>0)?(lev-1):0;leventer();"> &lt; </button>
-<span id=ajx3>0</span>
+<span id="ajx3" style="background:red;">0</span>
 <button onclick="lev=(lev<levmax)?(lev+1):levmax;leventer();"> &gt; </button>
 <button onclick="lev=(lev<levmax-10)?(lev+10):levmax;leventer();"> &gt;&gt; </button>
 <button onclick="lev=levmax;leventer();"> <?php echo "$num" ?> </button>
@@ -248,19 +242,27 @@ leventer();
 
 
 
-<div id=ajx1 class=pb> o</div><!-- предбанник -->
+<div id=ajx1 class=pb> п/б</div><!-- предбанник -->
 <div id=ajx2></div><!-- табла -->
 <div id=ajx4 style="color: white;"></div><!-- табла -->
 
 
-<script>/* закоментчено
-<button onclick="fb(ix20,3,'numr318d6r',18,0);"> * </button>
-<a href="/buka.php">сопоставить буквы страницем</a>
-width: 80%;  background: green; text-align: left;
-*/</script>
+<script>
+document.addEventListener("DOMContentLoaded", ()=>{
+	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
+	$('#ajx1').load('spis.php?k=1&e=1&pg=0&id=jx4');//лист	
+	});
 
-<?php  //include 'peps.php'// это разложение на столбы строки номера группы
-?>//
+function leventer(){//текущая страница списа (лев)
+///alert('xa'+lev+'xa'+levmax+'xa');
+	$('#ajx3').load('lev.php?coun1t='+lev);//'+lev);//
+	$('#ajx0').load('spis.php?k=5&pg='+lev);
+	}
+
+var lev=0;// страница ноль
+
+leventer();
+</script>
 </body>
 </html>
 

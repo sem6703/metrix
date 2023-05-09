@@ -1,6 +1,6 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
 
-if ( isset($_GET['k']))echo $_GET['k'];
+if ( isset($_GET['coun1t']))echo $_GET['coun1t'];
 
 ?>

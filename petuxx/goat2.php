@@ -67,7 +67,7 @@ else
 ?>
 
 <?php  // аяксо вывод
-	echo '<span style="color: white;"> '.$t.' </span>';
+	//echo '<span style="color: white;"> '.$t.' </span>';
 
 	echo "<table border=1 bgcolor=#e0ffff width=90% class='bell' cellspacing=0 bordercolor=blue>";
 	print_r($c2['hat']);

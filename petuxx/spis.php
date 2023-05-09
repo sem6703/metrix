@@ -1,6 +1,6 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
-$d23=array('d2','d3');//// зебра для списа
+
 $pga=100;
 $p2='';
 $sizon=5;//50
@@ -10,11 +10,6 @@ if (isset($_GET['e'])) $e=$_GET['e']-1; else $e=0;// строка
 
 
 
-
-//include('config.php');
-//$cu=mysqli_connect(k127001,kroot,kempty,kphote);// коннектикум
-//$cu=mysqli_connect("127.0.0.1","root","","petux");
-//$cu=mysqli_connect("127.0.0.1","root","","mk24");
 $cu=mysqli_connect("127.0.0.1","root","","kura24");
 if (!$cu){
 	echo 'здесь могла быть ваша ава';	
@@ -35,11 +30,11 @@ while ($j=mysqli_fetch_assoc($r)){
 	if ($j['phote']>0)$fot=mysqli_query($cu,"SELECT * FROM fote WHERE id1=".(int)$j['phote']);
 	if ($j['phote']>0){
 			$cfot=mysqli_fetch_assoc($fot);	
-			echo "<div class='d4' id='di$n'>".$cfot['img']." <tt>".($n+$start)."</tt> ".$pin.$j['ima'];
+			echo "<div class='d3' id='di$n'>".$cfot['img']." <tt>".($n+$start)."</tt> ".$pin.$j['ima'];
 			}
 			else
 			{
-			echo "<div class='".$d23[$n%2]." p8' id='di$n'> <tt>".($n+$start)."</tt> ".$pin.$j['ima'];//
+			echo "<div class='d3 p8' id='di$n'> <tt>".($n+$start)."</tt> ".$pin.$j['ima'];//
 			}
    $d=mysqli_query($cu,"SELECT * FROM `test` WHERE `g`='".(int)$j['id']."' ORDER BY `god`"); //все акты персоны
    $fa='';

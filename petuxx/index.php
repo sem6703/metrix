@@ -167,19 +167,18 @@ if (!$cu){
 <script>
 document.addEventListener("DOMContentLoaded", ()=>{
 	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
-	$('#ajx1').load('spis.php?k=1&e=1&pg=0&id=jx4');//лист	
+	$('#ajx1').load('spis2.php?k=1&e=0&pg=0&id=jx4');//п.б	
 	});
 
 function leventer(){//текущая страница списа (лев)
 	$('#ajx3').load('lev.php?coun1t='+lev);// счетчик
-	$('#ajx0').load('spis.php?k=5&pg='+lev);// лист
+	$('#ajx0').load('spis2.php?k=5&pg='+lev);// лист
 	}
 
 var lev=0;// страница ноль
 
 leventer();
-</script>
-<script>
+
 var curxx='i';// в списе подсвеченный эл
 var levmax=<?php echo "$num" ?>;// страниц в базе групп
 var old=0;
@@ -187,7 +186,7 @@ var old=0;
 
 function fy(x,n,s,e){// клик на листе
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-	$('#ajx1').load('spis.php?k=1&e='+e+'&pg='+lev+'&id='
+	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+lev+'&id='
 		+x.id.replace("i", "j"));// п/б
 
 	// клик на элементе гарантирует его наличие
@@ -199,9 +198,10 @@ function fy(x,n,s,e){// клик на листе
 
 function fb(x,n,s,e,pig){// клик на предбане
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-	$('#ajx1').load('spis.php?k=1&e='+e+'&pg='+pig+'&id='
-		+x.id);// п/б
-		
+	$('#ajx0').load('spis2.php?k=5&pg='+pig);// лист
+	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик
+	lev=pig;// страница
+	
 	if (!!old) { // освещение в списе
 		var u=old.id;
 		u=u.replace("j", "i");// по-другому невыйдешь на близнеца
@@ -221,10 +221,11 @@ function fb(x,n,s,e,pig){// клик на предбане
 
 function fj(y,n,s,e,pig){//клик на бани
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-	$('#ajx1').load('spis.php?k=1&e='+e+'&pg='+pig+'&id='+y);// п/б
-	$('#ajx0').load('spis.php?k=5&pg='+pig);// лист
-	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик
+	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+pig+'&id='+y);// п/б
+	$('#ajx0').load('spis2.php?k=5&pg='+pig);// лист
+	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик	
 	lev=pig;
+	
 	let u;
 	/*
 	if (!!old) { // освещение в листе

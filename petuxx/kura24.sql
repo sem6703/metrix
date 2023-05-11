@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 11 2023 г., 00:54
+-- Время создания: Май 11 2023 г., 14:33
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.5.38
 
@@ -50,7 +50,8 @@ INSERT INTO `fote` (`id1`, `img`, `who`) VALUES
 (9, '<img class=\"dd\" src=\"data:image/gif;base64,R0lGODlhEAAQAPcAAMKksLysyrex4LS19LG4+6+5+q+5+bS6/La19La06be54Lq2zsStmMuiJ8GdLJOUlMKlsbqsybSw3q2w66y29qu9+6e59rC5+LS087Wy6bW/6LW41cOsm82hCsqgGZSVlMOlsr6qxrKy3qq576zF+qnJ+6zK+7DI/K699bS06La95be62MWsmNKoFsqiEJeWjcGosretyrC/7KzG/KrG/avE+anF+6fG+qzG+7K35ri74re71b+tls+sHMqmGJ2YicCmr7Ouzq/F+KrE+abF+arG+KjH+6jG+6jH/LC/7rW44rW8172vrdOvMtKuKKGah7+lsLKv2K/H/q3D+qvF+azG+KrF/KrI/7DI97K65bS+4czFztu9YqiNPlRGO8GmurGm2K3F+ajA96vD96rE+KjH+qrF+KnJ/q7I97S75cDG27+2uwAAABEGDsGgvLig17LC9qbE+KjF+6nE+ajG+KjF96jI/KzB8bG34snM4nxudAgAABcACRIEDMGdwcGg2raz7arG/KvG/6nF/6nH/6rL/6/N/7S9773A69TT6SAJEUEULzYOJhwDEr+awLmdz7eo3a2676zF/bbV/7TP/rLD7Ki02q+x2tTd/5ePoE0RMVkUNkERKr2Yvr6gzLiq362x567A+MDN/DgdKU8XHGgkJmgiJW4/SFA0Rm5YgYxnmVciUUYUNMKbv8CezLyq3bGw5LS98qSKn1QaFnc7OX9ARW8wN3RCQjMKFn9pmKug3Mq+/ZqLtcGXt7uZxLun17Sv4Lq+7Y5qeIJEQKBfXLZ3cpxfXZFmbBMAAzQaKINmd62Zq39tiMWZucCdxbul0rev3b265bGTo200McF7cc6CdblvZ66Ilo55fa98fJ1gXg8AACoKGsSat7ydv7yn0bqq17uw2sq21Ihtg2NHUW9QVrCSotDF3t/OylMoJtWanYdcYVc8S8WYsMGfu76nyL+sz7yrzLytybuvybyyy7uwxruywr+yvsSxqXVXTzMKEU0tOo54iQAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwiUL278OOrUqlezbu0CRAgRI0gUMG/+PPLkypczb+4ESBAhQ4iUMHAAQfr06tezb+8GTBgxY8gUMXECRQIFCxg0cPAIUCBBgwiVMXIESQoVK1i0cPEKVChRo0gVMnMGTRIlS5g0cfIMWDBhwwiSMnQIURo1a9i0cfMOXDhx44gVM3UKVSJFixg1cvQQYECBA8mVM3YMWSpVq1i1cvUSZEiRIwkWNHcOXTJly5g1c/YUaFChQ0mWNHgQYTp169i1c/cWbFixY4kWNXkSZUKFCxk2dPgYcGDBg8mWNXoUsUmVK1m2dPkadGjRowkXNnsWaVKlS5k2dfoceCRw4cNJFzZ8GG1atWvZtnX7Hnx48eOJlzZ9GnFixYsZN3b8BAQAOw==\">\r\n\r\n', 'cock'),
 (10, '<img class=\"dd\" src=\"data:image/gif;base64,R0lGODlhEAAQAPcAAACw/AG0+QO2+AS49gi58wm78gu/7xHC7BHD7AjA6wrA7hS/7BK03xzA5xnC5RzG7ACt+QCw/QGy/gC2/wG5/QC4+gK+9wu/8hHD9wS/9QPG/xG8+AB7ugCKxBa98yzH9QCl9gKt+QGw+wK3/wi8/we4/gnJ/gnD8w7F+QbD9RPH/AqYzwF3qAB4o1ux4G222QKl+gOr/AGu+gS1/wq6/wCKzwm/8QbA8xHC+gux5wmg1gB/sQuEqQ+HpqrE6qm6yQSl/ASs/wCt/QKz/wWx/ABzvBK37xbD/xW49gCGvgKDuAWBqw6OrgCAozeJqYiqvAGf+gSy/wWx/wi6/wWw9AF/wQCBugBzrwB5sQJ0pg6FtBGLsgmIqAWCpAJ6njOOsQOj+wex/wFovgBirQCJzxCa3geOxQaIuAiMuAF9rAF9qweHrwiKrBWRtBiStyihywSl+wev/wBluQmZ3gKi7Aae5gKGwgqIugCAsSi87iy67Cqx3xGQuhGFsRR8pR6Jsgao/Qax/wuj9Ai3/wa1/wmy+QSLyBCEvAOAtCS56wB0qwZ1pQVwnRJ0nyV4oSV6pAWq/gCs/gC1/wTA/wuq5wJ5swR2rAyBtRFkmyJ2pSx/pyp1myJtkB5ylwOp/QCq/ASz/wSk8Qay/wOu+AOQ0Q58txNvphp1pRhijR9xlh5zkUGSrl231WHE5wOn/QCq+wWn+QBfsQp0xQN8xwBvrQ5ppRNnnhV3ph6LtlzS+mvZ/nfm/2jc/1vO+AGn/ACq+Qax/gBbpQJloRaj3QKLwwl+thaUyBrD8BvJ8jXN+EzJ9lbO9VjM+AKo/AOt/AS7/xOt9BHA/wTD/wq/+BrG+BDF+QTH+yDH/ETO/1fR/1nU/1bJ7m7F6gKp/QSv/QCz/gGx+QC0+wCz+gC3+QK/9gTB8wnF9STH+kDM+07K+EnO+XDD56/D4wOr/gKx/QS0/AW0+wSz+wO0+QO3+Ae+9gzC9BTE9CHG9TLJ+TrH9znG82W84KatygAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQfLkylezbu0CRAgRI0iUMHECRfr06pczb+4ESBAhQ4gUMXIESQAFC9izb+8GTBgxY8iUMXMGSQoVKxg0cPAIUCBBgwgVMnQITRAlS1i0cPEKVChRo0iVMnUKTRo1a5g0cfIMWDBhw4gVM3YMUSJFi9i0cfMOXDhx48iVM3cOVSpVqxg1cvQQYECBAwkWNHgQWTJly1i1cvUSZEiRI0mWNHkSXTp165g1c/YUaFChQ4kWNXoUYUKFC9m1c/cWbFixY8mWNXsWZUqVKxk2dPgYcGDBgwkXNnwYaVKlS1m2dPkadGjRo0mXNn0abVq1K5c2dfoceCRw4cOJFzd+HHFixWvZtnX7Hnx48ePJlzd/HnVq1YsZN3b8BAQAOw==\">\r\n', 'pig'),
 (11, '<img class=\"dd\" src=\"data:image/gif;base64,R0lGODlhEAAQAPcAAEVPXzpKPSA9Mx5koWZ/pmh9n2FzknOBnXJ7kltgdlZYbVVUY1BNUS8uKBkeFCcpLUBEUT5BQTFFTTdrn2x7m4yevHeGllljZ19qeVljdVpgbz5ASisnJSkkDQsJAB0fLWVugyYvPis2S15nfmNneGlwgVtjZV9eUUlSW299lY6arXmFm4CEl56dpo6VqHmFqDAzQhgPGxUZLCkwQHZ1nPPj//Da/6h9kI5baoRRWFAfJHlzjGNziVxleXSFp4yq0x4mOhchO3F5lFtfeKOYx9fE9bejyEouNWxOaLyetEweIE8cLIFugn+HkWmAqDRanh8pOwIOJkNIXB4fMXhZaYVaZ2pARjwWH5R1oriXtJNdZGkvNp1jgKeFkD5RlChFmikzQgABDR0dKBgYJDYkLVsvNGc0MmQ2NXpOVlQnJWAsLV4tLms9QUAfHx0ycRwpYUxYagAAAAgLFAcNFhYNGlstOWg0N4A+QHYzNWEqJ2MvMlwqK202NUwiIZJshLynxoOTswgGDQUEDgYJFQ4GEnI4Q2czOZBMVK1fZaBTVJtPUJNHSJtUUlcnI1YlJJRyg2+LsDI6RQkDBwgKEwIDDoZMVnw6PVYcIGYsL5Q/RqtTVXw1NV4kIlQeHFgiH3RDSBJLfydSeBUJCwcHDwADDlsxPqRCRWIOE2EWF7VWWrVbW61aW7doasl3edV9f7JoajRcgVd3lDApKgsIDgACDQoIFK1cbtpxfOZ4gf+Kkf+Okf6KjNNsableWcxvaIhMTFpwj2B0izxESSUfJwgADQAADA0DF0EhLC8VIyogHBcYDGdLXsF1gv+Xm7VhXS8bKFFqfV9yil5tfl5qeCUjKQABBBUrCAAICw4GFQgEFS8zShQRGScZMQ8HJxwYO1pweWl8lmJ3k3mPrHB/lCckM1lkXEZpEyxDEiQ6FjI/L2lrgVRUalddhRwlWx4gUEdgWW+GnWZ6l2ByjF5pfV9ngWp1j0lbVjVPRxo8NxolGklQa21ylG1jdFQ3UiYsZAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIFCxi0b+8CRAgRI0iUMHECRQoVK1g0cPAESBAhQ4gUMXIESRIlS5i0cPEGTBgxY8iUMXMGTRo1a9g0cfIIUCBBgwgVMnQIUSJFixi1cfMKVChRo0iVMnUKVSpVq1gccvQMWDBhw4gVM3YMWTJly1i1cvUOXDhx48iVM3cOXTp165g1c/YQYECBAwkWNHgQYUKFC9m1c/cSZEiRI0mWNHkSZUqVKxk2dPgUaFChQ4kWNXoUaVKlS1m2dPkWbFixY8mWNXsWbVq1a5k2dfoYcGDBgwkXNnwYcWLFi9m2dfsadGjRo0mXNn0adWrVqxk3dvwceCRw4cOJFzd+HHly5ctZt3b9Hnx48ePJlzd/Hn169euZN3f+BAQAOw==\">\r\n', 'dog'),
-(12, '<img class=\"dd\" src=\"data:image/gif;base64,R0lGODlhEAAQAPcAAMLc2Mbg3Mvl4c/o5NDo483k3mN0c7HFwtLp5dLq4tLp4dHo4dHo4tDn4tLo4cji3tTt6MDW0pirqHeJh4ucmQkTEWmAf+7//+j//9Xr5N3/+8/o4c7l38/l38bc1Mvk4pKnplptbVNkaVhrb2p9fUo4LWlqYoiGeYVqW2k9Ldzz6t359dr49NHr5sfd16q/v1Jna0ZdYUBZXEReYlRmZ3VRPY10YHhXQoFgT2E1I4FhT4x1ZdXq3+T/+Mnb03eKjUZdYi9LTzBLSjFRVE5iZWFALpCBcJB/bKiVh5uHeIZuXohoWZeBbnhhT25kVmF1eDRLTyU4OSs+OiI8PThTU0Q1JX9jTJRwW5NwXZFxX454ZINvW2pbSUE+LFhgT1JmaRg0NBguLBYtKhAoJiM+PxMrKwcdEgseDwgdDwkcEAkeEgodDwcbDgIXCSUxIERaXwogJA8gIA0hHw4iISY6OyM5PBQjHRMfFRYiFhckGRomGR8oGxghFSYuICUuHkNbXx02NhIkIRMjIhMjISc5OSI2NRYmIgoaERMfFCsxJxsiGQ0aGRglFyEtHyErHUtlaQskIwggHg8hIA0fHig9PSE3NygvKTQtIkJANjxAOQ8gGw8bFCEuGhQgERolF191ehUvMQ4mJw8kJAohIS9ISR85OxgvLwkbFhEiHBIeGQYVDhwpGhknGA8bDyg1J3iPkTBLUBk0OBgxMRYsK0VeYilFSxIpKQwaDxUiFg0UDBQdExonGg8bDhQgFCg1Kp64tl5zdTtSVzBLTyQ/QmJ3e05nayA3NgQNBQERCwUTDBwnGRckFA0ZDyQvJiEuJMXg34Sbm1Nlak5fZEBTWm19gm+AhzpLTgAAAAkZDhUgCh0jDwINAB0sIR8rHyEuIsjk4tLv7afCwHuRk1VpbF1ub26Bg1NmaAAGBKrCvnyPhFRnWRgqIig4Lx0sJB8tI8bj48fj48jk48nk48nl48bh367FxHaLjDNLTb/a2Mzk363Dv2Z4c0JSSis7Mi09MwAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABPPjw4seTL2/+PPr06tezb+8CQAABAwgUMHAAQQIFCxg0cPAERAgRI0iUMHECRQoVK1i0cPEGSBAhQ4gUMXIESRIlS5g0cfIITBgxY8iUMXMGTRo1a9i0cfMKUCBBgwgVMnQIUSJFixg1cvQMVChRo0iVMnUKVSpVq1i1cvUOWDBhw4gVM3YMWTJly5g1c/YQXDhx48iVM3cOXTp169i1c/cSYECBAwkWNHgQYUKFCxk2dPgUZEiRI0mWNHkSZUqVK1m2dPkWaFChQ4kWNXoUaVKlS5k2dfoUbFixY8mWNXsWbVq1a9m2dfsYcGDBgwkXNnwYcWLFixk3dvwadCRo0aNJlzZ9GnVq1atZt3b9HHhw4cOJFzd+HHly5cuZN3f+BAQAOw==\">\r\n\r\n', 'tiger');
+(12, '<img class=\"dd\" src=\"data:image/gif;base64,R0lGODlhEAAQAPcAAMLc2Mbg3Mvl4c/o5NDo483k3mN0c7HFwtLp5dLq4tLp4dHo4dHo4tDn4tLo4cji3tTt6MDW0pirqHeJh4ucmQkTEWmAf+7//+j//9Xr5N3/+8/o4c7l38/l38bc1Mvk4pKnplptbVNkaVhrb2p9fUo4LWlqYoiGeYVqW2k9Ldzz6t359dr49NHr5sfd16q/v1Jna0ZdYUBZXEReYlRmZ3VRPY10YHhXQoFgT2E1I4FhT4x1ZdXq3+T/+Mnb03eKjUZdYi9LTzBLSjFRVE5iZWFALpCBcJB/bKiVh5uHeIZuXohoWZeBbnhhT25kVmF1eDRLTyU4OSs+OiI8PThTU0Q1JX9jTJRwW5NwXZFxX454ZINvW2pbSUE+LFhgT1JmaRg0NBguLBYtKhAoJiM+PxMrKwcdEgseDwgdDwkcEAkeEgodDwcbDgIXCSUxIERaXwogJA8gIA0hHw4iISY6OyM5PBQjHRMfFRYiFhckGRomGR8oGxghFSYuICUuHkNbXx02NhIkIRMjIhMjISc5OSI2NRYmIgoaERMfFCsxJxsiGQ0aGRglFyEtHyErHUtlaQskIwggHg8hIA0fHig9PSE3NygvKTQtIkJANjxAOQ8gGw8bFCEuGhQgERolF191ehUvMQ4mJw8kJAohIS9ISR85OxgvLwkbFhEiHBIeGQYVDhwpGhknGA8bDyg1J3iPkTBLUBk0OBgxMRYsK0VeYilFSxIpKQwaDxUiFg0UDBQdExonGg8bDhQgFCg1Kp64tl5zdTtSVzBLTyQ/QmJ3e05nayA3NgQNBQERCwUTDBwnGRckFA0ZDyQvJiEuJMXg34Sbm1Nlak5fZEBTWm19gm+AhzpLTgAAAAkZDhUgCh0jDwINAB0sIR8rHyEuIsjk4tLv7afCwHuRk1VpbF1ub26Bg1NmaAAGBKrCvnyPhFRnWRgqIig4Lx0sJB8tI8bj48fj48jk48nk48nl48bh367FxHaLjDNLTb/a2Mzk363Dv2Z4c0JSSis7Mi09MwAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABPPjw4seTL2/+PPr06tezb+8CQAABAwgUMHAAQQIFCxg0cPAERAgRI0iUMHECRQoVK1i0cPEGSBAhQ4gUMXIESRIlS5g0cfIITBgxY8iUMXMGTRo1a9i0cfMKUCBBgwgVMnQIUSJFixg1cvQMVChRo0iVMnUKVSpVq1i1cvUOWDBhw4gVM3YMWTJly5g1c/YQXDhx48iVM3cOXTp169i1c/cSYECBAwkWNHgQYUKFCxk2dPgUZEiRI0mWNHkSZUqVK1m2dPkWaFChQ4kWNXoUaVKlS5k2dfoUbFixY8mWNXsWbVq1a9m2dfsYcGDBgwkXNnwYcWLFixk3dvwadCRo0aNJlzZ9GnVq1atZt3b9HHhw4cOJFzd+HHly5cuZN3f+BAQAOw==\">\r\n\r\n', 'tiger'),
+(13, '<img class=\"dd\" src=\"data:image/gif;base64,R0lGODlhEAAQAPcAAPDbx/LXxvPYyfLSvd21mOS+rN2wkZlmQZNbSJdZRd6vnN29q9i4qdOvo+G+q9a0o/PeyfPXxPjk0e7Js+e6nLiMcJBTLnpBG4hUSZpcS8mTet/Jute4sNa1qOrJrNOwpPXizPDZxfzs1u/Eq7qMcn5XOIlXQY9cRYlQQKRjT86Xfd/MwN7AvNO2qOPDptKwp/PizvXdzv/fxLaEYWo/KpNeLZpbQbZ1WqlmR59XO8ykldjHwdy+udu8ruXGsti1qfHk0unSyNOnkX9PLGU6F82ZizkhKJloWIdOKqptSPDc2NLEwdm7r+PFsN/DssqikvTq3Pjl2e/LxpprPXJEGrJ+dGdNUbN/bXM7G6NlMuDMydHBveDHuObIuuzJvb6XhfXt3/no1Naymr9xKZdHJKBmSdCiisONbnxNLadgJ6t4R+HDvPPb0evQxebBr7SSgPTr3/Pj0te1m/SIQ6koGYxGN7V7YJ5zVaFwQcuGP6FRFZ1hM+/Rwe3az62EaMSmlvbp3fPczeza0NOTZ+RuMqxzXriJbK+FXal4R7FxQYE7EoA0ANqie/jk2IplTt3BtvDfy/HWxvrx6cywn71+WLOOea2KUqJ0S5NkRGc/IW47H2wsAKlkM7KSfKZ+ZN/ArezUvu7Xwfv37enTx8CXcrOEaKt+XY9eRYdZPYhhPoBSMGk0DIxDEioAADEAAH1QOefPvfXizv/z4cyqlsuplbqParCKYKuAWqV4VJtwT4JRL2o5FoE8EJpxWNWtj7qXgurWx/jr2e/Vu5BePbOOdK98XptpTIxhOpltRYlcOohYNW8/HWgsBLeSf9q0pJ90XefWz/Lezr+ZfZhgPadzUq94UadzR6NwRaNxRqp4UJdjQo5cPl4wC1EeAVUeAHtII+ra0t+/r6p5WaZsRKBvQqt4TrWDW658WJ9sSK5+WXhKKHZJK3hOK6FtRtSeeayBau/c1MifiLmEYbN6T6dwQJ5pPZFfNpdmPZZlPI5iO4xdN4pWMKJqRMahjE8yJWJDNSH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIFCxg0cPACRAgRI0iUMHECRQoVK1i0cPEESBAhQ4gUMXIESRIlS5g0cfIGTBgxY8iUMXMGTRo1a9i0cfMIUCBBgwgVMnQIUSJFixg1cvQKVChRo0iVMnUKVSpVq1i1cvUMWDBhw4gVM3YMWTJly5g1c/YOXDhx48iVM3cOXTp169i1c/cQYECBAwkWNHgQYUKFCxk2dPgSZEiRI0mWNHkSZUqVK1m2dPkUaFChQ4kWNXoUaVKlS5k2dfoWbFixY8mWNXsWbVq1a9m2dfsYcGDBgwkXNnwYcWLFixk3dvwadGjRo0mXNn0adWrVq1m3dv0ceCRw4cOJFzd+HHly5cuZN3f+Hnx48ePJlzd/Hn169evZt3f/BAQAOw==\">\r\n', 'aguti');
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,8 @@ INSERT INTO `gru` (`id`, `ima`, `phote`, `use`) VALUES
 (9, 'петух', 9, 3),
 (10, 'свинья', 10, 1),
 (11, 'собака', 11, 1),
-(12, 'тигр', 12, 1);
+(12, 'тигр', 12, 1),
+(13, 'Агути', 13, 0);
 
 -- --------------------------------------------------------
 
@@ -91,7 +93,6 @@ INSERT INTO `gru` (`id`, `ima`, `phote`, `use`) VALUES
 
 CREATE TABLE `head` (
   `id` int(11) NOT NULL,
-  `god` text NOT NULL,
   `hat` text NOT NULL,
   `code` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -100,10 +101,10 @@ CREATE TABLE `head` (
 -- Дамп данных таблицы `head`
 --
 
-INSERT INTO `head` (`id`, `god`, `hat`, `code`) VALUES
-(1, '<tr><td colspan=8 style=\'font-size: 30px;\'><center><h1>\r\n00000\r\n</h1></center></td></tr>', '<tr>\r\n				<td rowspan=\"2\" bgcolor=\"#efefff\" class=\"ileft\">\r\n				Скрин\r\n				</td>\r\n				<td colspan=\"2\" class=\"ihead\">Счет рожд.</td>\r\n				<td colspan=\"2\" class=\"ihead\">Месяц и день</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Имена родившихся</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Звание, имя, отчество и фамилия родителей и какого вероисповедания</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Звание, имя, отчество и фамилия восприемников</td>\r\n				</tr>\r\n				<tr>\r\n				<td class=\"ihead\">Муж.</td>\r\n				<td class=\"ihead\">Жен.</td>\r\n				<td class=\"ihead\">Рождение</td>\r\n				<td class=\"ihead\">Крещение<br></td>\r\n				</tr>', 'r'),
-(2, '<tr><td colspan=9 style=\'font-size: 30px;\'><center><h1>\r\n00000\r\n</h1></center></td></tr>', '<tr>\r\n				<td rowspan=\"2\" bgcolor=\"#efefff\" class=\"ileft\">\r\n				Скрин\r\n				</td>\r\n				<td colspan=\"2\" class=\"ihead\">Счет умерших</td>\r\n				<td colspan=\"2\" class=\"ihead\">Месяц и день</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Звание, имя, отчество и фамилия умершего</td>\r\n				<td colspan=\"2\" class=\"ihead\">Лета умершего</td>\r\n				<td rowspan=\"2\" class=\"ihead\">От чего умер</td>\r\n				</tr>\r\n				<tr>\r\n				<td class=\"ihead\">Муж</td>\r\n				<td class=\"ihead\">Жен</td>\r\n				<td class=\"ihead\">Смерти</td>\r\n				<td class=\"ihead\">Погребения</td>\r\n				<td class=\"ihead\">Муж </td>\r\n				<td class=\"ihead\">Жен<br></td>\r\n				</tr>', 'd'),
-(3, '<tr><td colspan=8 style=\'font-size: 30px;\'><center><h1>\r\n00000\r\n</h1></center></td></tr>', '				<tr>\r\n				<td bgcolor=\"#efefff\" class=\"ileft\">\r\n				Скрин<br>\r\n				</td>\r\n				<td class=\"ihead\">Счет браков</td>\r\n				<td class=\"ihead\">Месяц и день</td>\r\n				<td class=\"ihead\">Звание, имя, отчество, фамилия и вероисповедание жениха, и которым браком</td>\r\n				<td class=\"ihead\">Лета жениха</td>\r\n				<td class=\"ihead\">Звание, имя, отчество, фамилия и вероисповедание невесты, и которым браком</td>\r\n				<td class=\"ihead\">Лета невесты</td>\r\n				<td class=\"ihead\">Кто был поручителем</td>\r\n				</tr>', 'm');
+INSERT INTO `head` (`id`, `hat`, `code`) VALUES
+(1, '<tr>\r\n				<td rowspan=\"2\" bgcolor=\"#efefff\" class=\"ileft\">\r\n				Скрин\r\n				</td>\r\n				<td colspan=\"2\" class=\"ihead\">Счет рожд.</td>\r\n				<td colspan=\"2\" class=\"ihead\">Месяц и день</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Имена родившихся</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Звание, имя, отчество и фамилия родителей и какого вероисповедания</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Звание, имя, отчество и фамилия восприемников</td>\r\n				</tr>\r\n				<tr>\r\n				<td class=\"ihead\">Муж.</td>\r\n				<td class=\"ihead\">Жен.</td>\r\n				<td class=\"ihead\">Рождение</td>\r\n				<td class=\"ihead\">Крещение<br></td>\r\n				</tr>', 'r'),
+(2, '<tr>\r\n				<td rowspan=\"2\" bgcolor=\"#efefff\" class=\"ileft\">\r\n				Скрин\r\n				</td>\r\n				<td colspan=\"2\" class=\"ihead\">Счет умерших</td>\r\n				<td colspan=\"2\" class=\"ihead\">Месяц и день</td>\r\n				<td rowspan=\"2\" class=\"ihead\">Звание, имя, отчество и фамилия умершего</td>\r\n				<td colspan=\"2\" class=\"ihead\">Лета умершего</td>\r\n				<td rowspan=\"2\" class=\"ihead\">От чего умер</td>\r\n				</tr>\r\n				<tr>\r\n				<td class=\"ihead\">Муж</td>\r\n				<td class=\"ihead\">Жен</td>\r\n				<td class=\"ihead\">Смерти</td>\r\n				<td class=\"ihead\">Погребения</td>\r\n				<td class=\"ihead\">Муж </td>\r\n				<td class=\"ihead\">Жен<br></td>\r\n				</tr>', 'd'),
+(3, '				<tr>\r\n				<td bgcolor=\"#efefff\" class=\"ileft\">\r\n				Скрин<br>\r\n				</td>\r\n				<td class=\"ihead\">Счет браков</td>\r\n				<td class=\"ihead\">Месяц и день</td>\r\n				<td class=\"ihead\">Звание, имя, отчество, фамилия и вероисповедание жениха, и которым браком</td>\r\n				<td class=\"ihead\">Лета жениха</td>\r\n				<td class=\"ihead\">Звание, имя, отчество, фамилия и вероисповедание невесты, и которым браком</td>\r\n				<td class=\"ihead\">Лета невесты</td>\r\n				<td class=\"ihead\">Кто был поручителем</td>\r\n				</tr>', 'm');
 
 -- --------------------------------------------------------
 
@@ -124,10 +125,10 @@ CREATE TABLE `kok` (
 --
 
 INSERT INTO `kok` (`id`, `god`, `link`, `txt`, `fam`) VALUES
-(1, '1918', 'numr1r', '				<tr>\r\n				<td bgcolor=\"white\" class=\"icenter\">\r\n				<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n						<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n				  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n				  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n				</svg></a><br>\r\n				</td>\r\n				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>\r\n				<td><span class=\"a vo\"><mark>Дракон</mark></span><br></td>\r\n				<td class=\"ileft\">\r\n				Деревни крестьянин<br>\r\n				<span class=\"a\"><mark>Крыс</mark></span><br>\r\n				и законная жена его<br>\r\n				<span class=\"a\"><mark>Овца</mark></span><br>\r\n				оба православные<br>\r\n				</td><td class=\"ileft\">\r\n				Деревни крестьянин <span class=\"a\"><mark>Бык</mark></span><br>\r\n				крестьянская девица <span class=\"a\"><mark>Обезьяна</mark></span></td></tr>', 'https://www.familysearch.org/ark:/61903/3:1:3QS7-899H-3D7Y?i=667&cc=1807365&cat=1149477'),
-(2, '1918', 'numr2r', '				<tr>\r\n				<td bgcolor=\"white\" class=\"icenter\">\r\n				<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n						<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n				  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n				  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n				</svg></a><br>\r\n				</td>\r\n				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>\r\n				<td><span class=\"a vo\"><mark>Лошадь</mark></span><br></td>\r\n				<td class=\"ileft\">\r\n				Деревни крестьянин<br>\r\n				<span class=\"a\"><mark>Тигр</mark></span><br>\r\n				и законная жена его<br>\r\n				<span class=\"a\"><mark>Курица</mark></span><br>\r\n				оба православные<br>\r\n				</td><td class=\"ileft\">\r\n				Деревни крестьянин <span class=\"a\"><mark>Заяц</mark></span><br>\r\n				крестьянская девица <span class=\"a\"><mark>Собака</mark></span></td></tr>', 'https://www.familysearch.org/ark:/61903/3:1:3QS7-899H-3D7Y?i=667&cc=1807365&cat=1149477'),
-(3, '1918', 'numr3m', '				<tr><td bgcolor=\"white\" class=\"icenter\">\r\n				<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n				<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n		  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"/>\r\n		  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"/>\r\n				</svg></a><br>				\r\n				</td><td>15</td><td><b> 10 нояб 1914</b></td><td class=\"ileft\">\r\n				села крестьянин\r\n				<h4><span class=\"a\"><mark>Драко</mark></span></h4>\r\n				православного вероисповедания, \r\n				первым браком\r\n				</td><td>\r\n				<h2>18</h2>p.1896</td><td class=\"ileft\">\r\n				временно-проживающая в селе крестьянская девица\r\n				<h4><span class=\"a\"><mark>Лошадь</mark></span></h4>\r\n				православного вероисповедания, \r\n				первым браком\r\n				</td><td><h2>16</h2>p.1897</td><td class=\"ileft\">\r\n				<strong>по жениху:</strong>\r\n				села крестьяне <span class=\"a\"><mark>Змея</mark></span><br>\r\n				<span class=\"a\"><mark>Свинья</mark></span><br>\r\n				<strong>по невесте:</strong>\r\n				села крестьяне <span class=\"a\"><mark>Мышь</mark></span><br>\r\n				<span class=\"a\"><mark>Курица</mark></span><br>\r\n				</td></tr>', 'https://www.familysearch.org/ark:/61903/3:1:3QS7-899H-3D7Y?i=667&cc=1807365&cat=1149477'),
-(4, '1918', 'numr4d', '				<tr><td bgcolor=\"white\" class=\"icenter\">\r\n					<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n						<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n				  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n				  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n						</svg>\r\n					</a></td>\r\n				<td></td><td>29</td><td>4 сент 1900</td><td>6</td><td class=\"ileft\">\r\n				д билетного солдата<br>\r\n				<span class=\"a\"><mark>Кролик</mark></span><br>\r\n				дочь<br>\r\n				<span class=\"vo\"><span class=\"a\"><mark>Курица</mark></span></span><br>\r\n				</td><td></td><td><span class=\"vo\">1г2м</span></td><td>от коклюша<br><br></td></tr>', 'https://www.familysearch.org/ark:/61903/3:1:3QS7-899H-3D7Y?i=667&cc=1807365&cat=1149477');
+(1, '1918', 'numr1r', '				<tr>\r\n				<td bgcolor=\"white\" class=\"icenter\">\r\n				<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n						<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n				  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n				  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n				</svg></a><br>\r\n				</td>\r\n				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>\r\n				<td><span class=\"a vo\"><mark>Дракон</mark></span><br></td>\r\n				<td class=\"ileft\">\r\n				Деревни крестьянин<br>\r\n				<span class=\"a\"><mark>Крыс</mark></span><br>\r\n				и законная жена его<br>\r\n				<span class=\"a\"><mark>Овца</mark></span><br>\r\n				оба православные<br>\r\n				</td><td class=\"ileft\">\r\n				Деревни крестьянин <span class=\"a\"><mark>Бык</mark></span><br>\r\n				крестьянская девица <span class=\"a\"><mark>Обезьяна</mark></span></td></tr>', ''),
+(2, '1918', 'numr2r', '				<tr>\r\n				<td bgcolor=\"white\" class=\"icenter\">\r\n				<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n						<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n				  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n				  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n				</svg></a><br>\r\n				</td>\r\n				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>\r\n				<td><span class=\"a vo\"><mark>Лошадь</mark></span><br></td>\r\n				<td class=\"ileft\">\r\n				Деревни крестьянин<br>\r\n				<span class=\"a\"><mark>Тигр</mark></span><br>\r\n				и законная жена его<br>\r\n				<span class=\"a\"><mark>Курица</mark></span><br>\r\n				оба православные<br>\r\n				</td><td class=\"ileft\">\r\n				Деревни крестьянин <span class=\"a\"><mark>Заяц</mark></span><br>\r\n				крестьянская девица <span class=\"a\"><mark>Собака</mark></span></td></tr>', ''),
+(3, '1918', 'numr3m', '				<tr><td bgcolor=\"white\" class=\"icenter\">\r\n				<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n				<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n		  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"/>\r\n		  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"/>\r\n				</svg></a><br>				\r\n				</td><td>15</td><td><b> 10 нояб 1914</b></td><td class=\"ileft\">\r\n				села крестьянин\r\n				<h4><span class=\"a\"><mark>Драко</mark></span></h4>\r\n				православного вероисповедания, \r\n				первым браком\r\n				</td><td>\r\n				<h2>18</h2>p.1896</td><td class=\"ileft\">\r\n				временно-проживающая в селе крестьянская девица\r\n				<h4><span class=\"a\"><mark>Лошадь</mark></span></h4>\r\n				православного вероисповедания, \r\n				первым браком\r\n				</td><td><h2>16</h2>p.1897</td><td class=\"ileft\">\r\n				<strong>по жениху:</strong>\r\n				села крестьяне <span class=\"a\"><mark>Змея</mark></span><br>\r\n				<span class=\"a\"><mark>Свинья</mark></span><br>\r\n				<strong>по невесте:</strong>\r\n				села крестьяне <span class=\"a\"><mark>Мышь</mark></span><br>\r\n				<span class=\"a\"><mark>Курица</mark></span><br>\r\n				</td></tr>', ''),
+(4, '1918', 'numr4d', '				<tr><td bgcolor=\"white\" class=\"icenter\">\r\n					<a href=\"old-ruf.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n						<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n				  <path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n				  <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n						</svg>\r\n					</a></td>\r\n				<td></td><td>29</td><td>4 сент 1900</td><td>6</td><td class=\"ileft\">\r\n				д билетного солдата<br>\r\n				<span class=\"a\"><mark>Кролик</mark></span><br>\r\n				дочь<br>\r\n				<span class=\"vo\"><span class=\"a\"><mark>Курица</mark></span></span><br>\r\n				</td><td></td><td><span class=\"vo\">1г2м</span></td><td>от коклюша<br><br></td></tr>', '');
 
 -- --------------------------------------------------------
 
@@ -137,28 +138,27 @@ INSERT INTO `kok` (`id`, `god`, `link`, `txt`, `fam`) VALUES
 
 CREATE TABLE `peps` (
   `id` int(11) NOT NULL,
-  `g` int(11) NOT NULL,
-  `xx` int(11) NOT NULL,
-  `yy` int(11) NOT NULL
+  `g` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `peps`
 --
 
-INSERT INTO `peps` (`id`, `g`, `xx`, `yy`) VALUES
-(1, 1, 1, 0),
-(2, 2, 2, 0),
-(3, 3, 3, 0),
-(4, 4, 4, 0),
-(5, 5, 5, 0),
-(6, 6, 6, 0),
-(7, 7, 7, 0),
-(8, 8, 8, 0),
-(9, 9, 9, 0),
-(10, 10, 10, 0),
-(11, 11, 11, 0),
-(12, 12, 12, 0);
+INSERT INTO `peps` (`id`, `g`) VALUES
+(1, 13),
+(2, 1),
+(3, 2),
+(4, 3),
+(5, 4),
+(6, 5),
+(7, 6),
+(8, 7),
+(9, 8),
+(10, 9),
+(11, 10),
+(12, 11),
+(13, 12);
 
 -- --------------------------------------------------------
 
@@ -250,13 +250,13 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT для таблицы `fote`
 --
 ALTER TABLE `fote`
-  MODIFY `id1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `gru`
 --
 ALTER TABLE `gru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `head`
@@ -274,7 +274,7 @@ ALTER TABLE `kok`
 -- AUTO_INCREMENT для таблицы `peps`
 --
 ALTER TABLE `peps`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `test`

@@ -71,7 +71,7 @@ img{transform:translate(0,2px)}
 #ajx1{margin:44px auto 0;padding: 15px 0;width:90%;background: white;border-radius: 12px;}	
 #ajx2{}
 #ajx3{}
-#ajx4{margin:44px auto 0;width:90%; color: black; background: red;}
+#ajx4{margin:44px auto 0;width:90%; color: black; background: yellow;}
 #ajx5{background: lime; background-image: url(old-ruf.jpg); background-size: cover;border-radius: 0 30px 30px 0;}
 	</style>
 
@@ -82,7 +82,7 @@ img{transform:translate(0,2px)}
 <?php
 $cu=mysqli_connect("127.0.0.1","root","","kura24");
 if (!$cu){
-	echo 'здесь могла быть ваша ава';	
+	echo 'база ноу коннект';	
 }else{
 //--------------------------------------------   
 	$r=mysqli_query($cu,"SELECT * FROM `gru` ORDER BY `ima`"); //
@@ -167,7 +167,7 @@ if (!$cu){
 <script>
 document.addEventListener("DOMContentLoaded", ()=>{
 	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
-	$('#ajx1').load('spis2.php?k=1&e=0&pg=0&id=jx4');//п.б	
+	$('#ajx1').load('spis2.php?k=1&e=1&pg=0&id=jx4');//п.б	
 	});
 
 function leventer(){//текущая страница списа (лев)

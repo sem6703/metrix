@@ -72,7 +72,10 @@ while ($j=mysqli_fetch_assoc($r)){
 		echo $fa.'</div>';   	
 }
 //----------------------------------
-	mysqli_close($cu);   
+	mysqli_close($cu); 
+echo "<script>";	
+echo "wanted.innerHTML=".$ww.";";
+echo "</script>";	
 }
 ?>
 

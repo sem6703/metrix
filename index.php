@@ -172,7 +172,7 @@ if (!$cu){
 По материалам сайта <a href="https://www.familysearch.org" style="color: #ffff00">familysearch.org</a>
 </footer>
 
-<footer id="wanted">12</footer>
+<footer id="wanted">4</footer>
 
 <script src="jq/jquery-2.1.0.min.js"></script>
 <script>
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 function leventer(){//текущая страница списа (лев)
 	$('#ajx3').load('lev.php?coun1t='+lev);// счетчик
-	$('#ajx0').load('spis2.php?k=5&pg='+lev);// лист
+	$('#ajx0').load('spis2.php?k=5&pg='+lev+'&id='+wanted.innerHTML);// лист
 	}
 
 var lev=0;// страница ноль

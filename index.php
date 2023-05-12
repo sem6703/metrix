@@ -12,7 +12,9 @@ header ("Content-Type: text/html; charset=utf-8");
 	<style>
 
 *:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
-body{padding: 33px 0;background: linear-gradient(rgba(0,0,0,0.9), blue); 
+body{padding: 33px 0;background-image: linear-gradient(rgba(0,0,0,0.9), #013301); 
+	background-color: #013301;
+	background-repeat: no-repeat;
 	text-align: center;
 	color: white; font-family: sans-serif;
 	}
@@ -63,16 +65,20 @@ img{transform:translate(0,2px)}
 	margin:0 auto;
 	width:80%;
 	display: grid; 
-	grid-template: 145px / 3fr 2fr;
+	grid-template: 145px 80px/ 3fr 3fr;
 	border:2px solid white;
-	border-radius: 15px 30px 30px 15px;
+	border-radius: 15px 30px 0px 15px;
 	}
-#ajx0{background: #fed;overflow-y: scroll;border-radius: 15px 0 0 15px;}
-#ajx1{margin:44px auto 0;padding: 15px 0;width:90%;background: white;border-radius: 12px;}	
+#ajx0{background: #fed;overflow-y: scroll;border-radius: 15px 0 0 0;}
+#ajx1{padding: 15px 0;background: white;border-radius: 0 0 0 12px;
+	display:flex;align-items:center;border-top:2px solid purple;}	
 #ajx2{}
 #ajx3{}
-#ajx4{margin:4px auto 0;width:90%; color: black; background: yellow;}
-#ajx5{background: lime; background-image: url(old-ruf.jpg); background-size: cover;border-radius: 0 30px 30px 0;}
+#ajx4{margin:4px auto 0;max-width:1080px; color: black; background: yellow;}
+#ajx5{background: lime; background-image: url(sign00.jpg); 
+	background-size: cover;border-radius: 0 30px 0 0;
+	background-position: center center;}
+#ajx6{overflow-y: scroll; color: black;background: #fed;border-radius: 0 0 0px 0;}
 	</style>
 
 </head>
@@ -102,20 +108,10 @@ if (!$cu){
 
 
 <section>
-	<div class="win">	
-		<div id="ajx0"></div>
-		<div id="ajx5" style="
-		"></div>
-	</div>
+
 
 	<article>
-		<div class="buts">
-			<button onclick="lev=0;leventer();"> 0 </button>
-			<button onclick="lev=(lev>0)?(lev-1):0;leventer();"> &lt; </button>
-			<span id="ajx3">0</span>
-			<button onclick="lev=(lev<levmax)?(lev+1):levmax;leventer();"> &gt; </button>
-			<button onclick="lev=levmax;leventer();"> <? echo $num; ?> </button>
-		</div>
+
 		<div class="alf">
 			<button onclick="lev=0;leventer();"> А </button>
 			<button onclick="lev=0;leventer();"> Б </button>
@@ -146,13 +142,25 @@ if (!$cu){
 			<button onclick="lev=2;leventer();"> Ю </button>
 			<button onclick="lev=2;leventer();"> Я </button>
 		</div>
+		<div class="buts">
+			<button onclick="lev=0;leventer();"> 0 </button>
+			<button onclick="lev=(lev>0)?(lev-1):0;leventer();"> &lt; </button>
+			<span id="ajx3">0</span>
+			<button onclick="lev=(lev<levmax)?(lev+1):levmax;leventer();"> &gt; </button>
+			<button onclick="lev=levmax;leventer();"> <? echo $num; ?> </button>
+		</div>		
 	</article>
+	<div class="win">	
+		<div id="ajx0"></div>
+		<div id="ajx5"></div>
+		<div id="ajx1"></div>
+		<div id="ajx6">Стихия, которая покровительствует Быку, может смягчать или усиливать его качества. Всего в восточном гороскопе пять стихий, у каждой свой характер и преимущества (огонь, вода, металл, дерево, земля). Бык — символ трудолюбия и выносливости, терпения и упорства.</div>
+	</div>
 </section>
 
 
 <section>	
-	<div id="ajx1">
-	</div>	
+		
 	
 	
 	<div id="ajx4">	
@@ -170,6 +178,7 @@ if (!$cu){
 document.addEventListener("DOMContentLoaded", ()=>{
 	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
 	$('#ajx1').load('spis2.php?k=1&e=1&pg=0&id=ix4');//п.б	
+	$('#ajx0').load('spis2.php?k=5&pg=0&id=ix4');// лист	
 	});
 
 function leventer(){//текущая страница списа (лев)
@@ -181,82 +190,33 @@ var lev=0;// страница ноль
 
 leventer();
 
-var curxx='i';// в списе подсвеченный эл
+
 var levmax=<?php echo "$num" ?>;// страниц в базе групп
-var old=0;
+
 
 
 function fy(x,n,s,e){// клик на листе
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+lev+'&id='
-		//+x.id.replace("i", "j"));// п/б
-		+x.id.replace("j", "i"));// п/б
-	// клик на элементе гарантирует его наличие
-	//alert(old.id)
-	/*
-	if(old){old.style.backgroundColor='transparent';}
-	x.style.backgroundColor='lime';
-	old=x;	
-	*/
-	//alert('сначала')
-	
-	
+	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+lev+'&id='+x.id);// п/б
+	$('#ajx0').load('spis2.php?k=5&pg='+lev+'&id='+x.id);// лист		
 }
 
 
 function fb(x,n,s,e,pig){// клик на предбане
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
+	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+pig+'&id='+x.id);// п/б	 
 	$('#ajx0').load('spis2.php?k=5&pg='+pig+'&id='+x.id);// лист
 	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик
 	lev=pig;// страница
-	
-	/*
-	if (!!old) { // освещение в списе
-		var u=old.id;
-		u=u.replace("j", "i");// по-другому невыйдешь на близнеца
-		if(!!document.getElementById(u))// не факт что лев несъебался
-			document.getElementById(u).style.backgroundColor='transparent';		
-	}
-	if (!!x) {//
-		var u=x.id.replace("j", "i"); //спис подсвечу			
-		if(!!document.getElementById(u)){
-		  document.getElementById(u).style.backgroundColor='yellow';//'yellow';
-		  curxx=u;
-		}
-	}
-	old=x;
-	*/
 }
 
 
 function fj(y,n,s,e,pig){//клик на бани
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-
-	$('#ajx0').load('spis2.php?k=5&pg='+pig);// лист
+	$('#ajx0').load('spis2.php?k=5&pg='+pig+'&id='+y);// лист
 	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+pig+'&id='+y);// п/б	
 	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик	
 	lev=pig;
-	let w=wanted.innerHTML;
-	let e1=document.getElementById('jx'+w);
-	if(e1)e1.style.backgroundColor='cyan';
-	/*
-	let u;
-	
-	if (!!old) { // освещение в листе
-		u=old.id;// old может только в списе(j нет в имени)
-		if(!!document.getElementById(u))// не факт что лев несъебался
-		{document.getElementById(u).style.backgroundColor='transparent';		
-		}
-	}*/
-	/*
-	if(old)old.style.backgroundColor='transparent';
-	u=y.replace("j", "i"); //лист подсвечу	
-	if(!!document.getElementById(u)){
-		  document.getElementById(u).style.backgroundColor='red';//'yellow';//
-		  old=document.getElementById(u);
-		  curxx=u;
-	}
-	*/
 }
 </script>
 

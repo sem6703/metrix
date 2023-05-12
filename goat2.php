@@ -20,27 +20,10 @@ else
 
 	$s_j="SELECT * FROM `test` WHERE `link` LIKE '%$t' ORDER BY `code`";
 	$jjj=mysqli_query($cu,$s_j);//
-	while ($jj=mysqli_fetch_assoc($jjj)){//$jj=mysqli_fetch_assoc($jjj);// перебрать иных		
+	while ($jj=mysqli_fetch_assoc($jjj)){//// перебрать иных		
 		// из пепса надо вытащит всего лишь айди группы. айди разложить на строку столбец
 		$s_r="SELECT * FROM `peps` WHERE g=".$jj['g'];
-		
-		
-		/*
-		$m=0;
-		$s_p="SELECT * FROM `gru` ORDER BY `ima`";
-		$ppp=mysqli_query($cu,$s_p);// все упорядоченые		
-		do{
-			$m=$m+1;
-			$pp=mysqli_fetch_assoc($ppp);// 
-			echo "<h2>$m.".$pp['g']."_</h2>";
-		}while($jj['g']==$pp['g']);*/
-		
-		/* кажется тяжело гонять столько кругов ради одного значения
-		while ($pp=mysqli_fetch_assoc($ppp)){//echo "<h2>$m.".$pp['id']."_</h2>";
-		$m++;
-		if($pp['id']==$jj['g']){break;}
-		}
-		*/
+
 		$rrr=mysqli_query($cu,$s_r);// с пепса
 		$rr=mysqli_fetch_assoc($rrr);//
 		$m=$rr['id'];
@@ -49,15 +32,6 @@ else
 		
 		$yy=(($m-1)-($m-1)%$sz)/$sz;//столбец. учел что нумерация с единицы
 		$xx=($m-1) % $sz;// строка		
-/*
-		$yy=(($rr['id']-1)-($rr['id']-1)%$sz)/$sz;//столбец. учел что нумерация с единицы
-		$xx=($rr['id']-1) % $sz;// строка	
-		*/
-/*
-		$yy=($rr['id']-$rr['id']%$sz)/$sz;//столбец. учел что нумерация с единицы
-		$xx=$rr['id'] % $sz;// строка	
-*/		
-
 		$agu[]='<span onclick="'.'fj(\'jx'.$jj['id'].'\', '.$jj['code'].', \''.$t.'\','.$xx.','.$yy.');'.'">';//
 		}
 
@@ -70,8 +44,8 @@ else
 	$fu=preg_split("/<mark>|<\/mark>/", $c['txt']);
 	$num=round(count($fu)/2);
 	//----------------------------------
-	$hhh=mysqli_query($cu,"SELECT * FROM `head` WHERE `code`='".substr($t,-1)."'"); // тащим шапку
-	$h=mysqli_fetch_assoc($hhh); // тащим тащм шапку  
+	$hhh=mysqli_query($cu,"SELECT * FROM `head` WHERE `code`='".substr($t,-1)."'"); 
+	$h=mysqli_fetch_assoc($hhh); //шапка  
 	//-----------------------------------
 	mysqli_close($cu);   
 	}

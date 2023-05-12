@@ -33,7 +33,12 @@ while ($j=mysqli_fetch_assoc($r)){
 	if ($j['phote']>0){
 			$fot=mysqli_query($cu,"SELECT * FROM fote WHERE id1=".(int)$j['phote']);
 			$cfot=mysqli_fetch_assoc($fot);	
-			echo "<div class='d3' id='di$n'>".$cfot['img']." <tt>".($n+$start)."</tt> ".$pin.$j['ima'];
+			echo "<div class='d3' id='di$n'";
+			//echo " onclick='alert(`6lin`)'>";
+			//echo " onclick='fx(13)'>";
+			echo " onclick=\"".$j['fn']."\">";
+			echo $cfot['img']." <tt>";
+			echo ($n+$start)."</tt> ".$pin.$j['ima'];
 			}
 			else
 			{
@@ -55,7 +60,7 @@ while ($j=mysqli_fetch_assoc($r)){
 			.' |as: '.$k['read1'];
 		if (!$ban)$fa.='"  id="ix'.($k['id']); else $fa.='"  id="jx'.($k['id']);
 
-		$fa.='" onclick="';
+		$fa.='" onclick="event.stopPropagation();';
 
 		$fa.=($ban)?'fy':'fb';
 

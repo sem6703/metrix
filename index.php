@@ -201,9 +201,12 @@ leventer();
 
 var levmax=<?php echo "$num" ?>;// страниц в базе групп
 
-
+function fx(x){// клик на пустой группе
+	$('#ajx5').load('von.php?i='+x);// портрет
+}
 
 function fy(x,n,s,e){// клик на листе
+
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
 	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+lev+'&id='+x.id);// п/б
 	$('#ajx0').load('spis2.php?k=5&pg='+lev+'&id='+x.id);// лист

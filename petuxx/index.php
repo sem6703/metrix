@@ -63,7 +63,7 @@ img{transform:translate(0,2px)}
 	margin:0 auto;
 	width:80%;
 	display: grid; 
-	grid-template: 444px / 3fr 2fr;
+	grid-template: 145px / 3fr 2fr;
 	border:2px solid white;
 	border-radius: 15px 30px 30px 15px;
 	}
@@ -71,7 +71,7 @@ img{transform:translate(0,2px)}
 #ajx1{margin:44px auto 0;padding: 15px 0;width:90%;background: white;border-radius: 12px;}	
 #ajx2{}
 #ajx3{}
-#ajx4{margin:44px auto 0;width:90%; color: black; background: yellow;}
+#ajx4{margin:4px auto 0;width:90%; color: black; background: yellow;}
 #ajx5{background: lime; background-image: url(old-ruf.jpg); background-size: cover;border-radius: 0 30px 30px 0;}
 	</style>
 
@@ -126,7 +126,7 @@ if (!$cu){
 			<button onclick="lev=0;leventer();"> Ж </button>
 			<button onclick="lev=0;leventer();"> З </button>
 			<button onclick="lev=0;leventer();"> И </button>
-			<button onclick="lev=0;leventer();"> К </button>
+			<button onclick="lev=1;leventer();"> К </button>
 			<button onclick="lev=1;leventer();"> Л </button>
 			<button onclick="lev=1;leventer();"> М </button>
 			<button onclick="lev=1;leventer();"> Н </button>
@@ -163,11 +163,13 @@ if (!$cu){
 По материалам сайта <a href="https://www.familysearch.org" style="color: #ffff00">familysearch.org</a>
 </footer>
 
+<footer id="wanted">12</footer>
+
 <script src="jq/jquery-2.1.0.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", ()=>{
 	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
-	$('#ajx1').load('spis2.php?k=1&e=1&pg=0&id=jx4');//п.б	
+	$('#ajx1').load('spis2.php?k=1&e=1&pg=0&id=ix4');//п.б	
 	});
 
 function leventer(){//текущая страница списа (лев)
@@ -187,21 +189,28 @@ var old=0;
 function fy(x,n,s,e){// клик на листе
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
 	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+lev+'&id='
-		+x.id.replace("i", "j"));// п/б
-
+		//+x.id.replace("i", "j"));// п/б
+		+x.id.replace("j", "i"));// п/б
 	// клик на элементе гарантирует его наличие
-	if(old)old.style.backgroundColor='transparent';
+	//alert(old.id)
+	/*
+	if(old){old.style.backgroundColor='transparent';}
 	x.style.backgroundColor='lime';
 	old=x;	
+	*/
+	//alert('сначала')
+	
+	
 }
 
 
 function fb(x,n,s,e,pig){// клик на предбане
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-	$('#ajx0').load('spis2.php?k=5&pg='+pig);// лист
+	$('#ajx0').load('spis2.php?k=5&pg='+pig+'&id='+x.id);// лист
 	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик
 	lev=pig;// страница
 	
+	/*
 	if (!!old) { // освещение в списе
 		var u=old.id;
 		u=u.replace("j", "i");// по-другому невыйдешь на близнеца
@@ -216,31 +225,38 @@ function fb(x,n,s,e,pig){// клик на предбане
 		}
 	}
 	old=x;
+	*/
 }
 
 
 function fj(y,n,s,e,pig){//клик на бани
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
-	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+pig+'&id='+y);// п/б
+
 	$('#ajx0').load('spis2.php?k=5&pg='+pig);// лист
+	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+pig+'&id='+y);// п/б	
 	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик	
 	lev=pig;
-	
-	let u;
+	let w=wanted.innerHTML;
+	let e1=document.getElementById('jx'+w);
+	if(e1)e1.style.backgroundColor='cyan';
 	/*
+	let u;
+	
 	if (!!old) { // освещение в листе
 		u=old.id;// old может только в списе(j нет в имени)
 		if(!!document.getElementById(u))// не факт что лев несъебался
 		{document.getElementById(u).style.backgroundColor='transparent';		
 		}
 	}*/
+	/*
 	if(old)old.style.backgroundColor='transparent';
 	u=y.replace("j", "i"); //лист подсвечу	
 	if(!!document.getElementById(u)){
 		  document.getElementById(u).style.backgroundColor='red';//'yellow';//
 		  old=document.getElementById(u);
 		  curxx=u;
-	}	
+	}
+	*/
 }
 </script>
 

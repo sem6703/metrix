@@ -74,9 +74,31 @@ while ($j=mysqli_fetch_assoc($r)){
 	mysqli_close($cu);   
 }
 
-if ( isset($_GET['id'])) echo "<script>var v=document.getElementById('".$_GET['id']."'); if (!!v) v.classList.add('acti');</script>";
+if ( isset($_GET['id'])){
+	echo "<script>";
+	echo "let w=wanted.innerHTML;";
+	echo "let e1=document.getElementById('jx'+w);";
+	echo "if(e1)e1.style.backgroundColor='transparent';";
+	echo "let e2=document.getElementById('ix'+w);";
+	//echo "";
+	echo "if(e2)e2.style.backgroundColor='transparent';";		
+	echo "w=".(preg_replace("/ix|jx/","",$_GET['id'])).";";
+	echo "wanted.innerHTML=w;";
+	//echo "alert('потом');";
+	echo "e1=document.getElementById('jx'+w);";	
+	echo "if(e1)e1.style.backgroundColor='cyan';";
+	echo "e2=document.getElementById('ix'+w);";	
+	echo "if(e2)e2.style.backgroundColor='cyan';";	
+	echo "</script>";
+	}
+/*
+if ( isset($_GET['id'])) echo "<script>;var v=document.getElementById('".$_GET['id']."'); if (!!v) {v.classList.add('acti');}else{}</script>";
 
 if ($ban) echo "<script>var v=document.getElementById(curxx); if (!!v) v.classList.add('acti');</script>";	
 
+alert(`".$_GET['id']."`)
+alert('es ser')
+alert('not found ".$_GET['id']."')
+*/
 ?>
 

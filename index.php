@@ -77,10 +77,15 @@ img{transform:translate(0,2px)}
 #ajx2{}
 #ajx3{}
 #ajx4{margin:4px auto 0;max-width:1080px; color: black; background: yellow;}
-#ajx5{background: #013301; background-image: url(sign00.jpg); 
+#ajx5{
+	position: relative;
+	background: #013301; background-image: url(sign00.jpg); 
 	background-size: cover;border-radius: 0 30px 0 0;
 	background-position: center center;}
 #ajx6{overflow-y: scroll; color: black;background: #fed;border-radius: 0 0 0px 0;}
+.pot{width:120px; aspect-ratio:1;background: white;
+position: absolute;bottom:-3px;right:25px;}
+.pot img.dd{margin-top:-5px;display:block;width:124px; aspect-ratio:1;}
 	</style>
 
 </head>
@@ -181,6 +186,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
 	$('#ajx1').load('spis2.php?k=1&e=1&pg=0&id=ix4');//п.б	
 	$('#ajx0').load('spis2.php?k=5&pg=0&id=ix4');// лист	
+	$('#ajx5').load('nes.php?i=4');// портрет	
 	});
 
 function leventer(){//текущая страница списа (лев)
@@ -200,7 +206,8 @@ var levmax=<?php echo "$num" ?>;// страниц в базе групп
 function fy(x,n,s,e){// клик на листе
 	$('#ajx4').load('goat2.php?i='+n+'&t='+s);// баня
 	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+lev+'&id='+x.id);// п/б
-	$('#ajx0').load('spis2.php?k=5&pg='+lev+'&id='+x.id);// лист		
+	$('#ajx0').load('spis2.php?k=5&pg='+lev+'&id='+x.id);// лист
+	$('#ajx5').load('nes.php?i='+x.id);// портрет	
 }
 
 
@@ -210,6 +217,7 @@ function fb(x,n,s,e,pig){// клик на предбане
 	$('#ajx0').load('spis2.php?k=5&pg='+pig+'&id='+x.id);// лист
 	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик
 	lev=pig;// страница
+	$('#ajx5').load('nes.php?i='+x.id);// портрет
 }
 
 
@@ -219,6 +227,8 @@ function fj(y,n,s,e,pig){//клик на бани
 	$('#ajx1').load('spis2.php?k=1&e='+e+'&pg='+pig+'&id='+y);// п/б	
 	$('#ajx3').load('lev.php?coun1t='+pig);// счетчик	
 	lev=pig;
+	$('#ajx5').load('nes.php?i='+y);// портрет	
+
 }
 </script>
 

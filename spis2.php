@@ -71,10 +71,20 @@ while ($j=mysqli_fetch_assoc($r)){
 		   
 		echo $fa.'</div>';   	
 }
+
+
+
+	$s_u="SELECT * FROM `test` WHERE `id`=".(int)$ww;	
+	$uuu=mysqli_query($cu,$s_u);	
+	$u=mysqli_fetch_assoc($uuu);
+	$vvv=mysqli_query($cu,"SELECT * FROM `gru` WHERE `id`=".(int)$u['g']); 
+	$v=mysqli_fetch_assoc($vvv);
 //----------------------------------
 	mysqli_close($cu); 
+	
 echo "<script>";	
 echo "wanted.innerHTML=".$ww.";";
+echo "ajx6.innerHTML=`".$v['txt']."`;";	
 echo "</script>";	
 }
 ?>

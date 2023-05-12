@@ -22,6 +22,7 @@ body{padding: 33px 0;background-image: linear-gradient(rgba(0,0,0,0.9), #013301)
 .d3{padding: 0 22px;text-align: left;color: black;}
 .d3:nth-child(odd){background:white;}
 .d3:nth-child(even){background:#fed;}
+#ajx0 .d3:hover{background: cyan;}
 .palec{
 	cursor: pointer;text-decoration: none;
 	border-bottom:1px solid black;
@@ -76,7 +77,7 @@ img{transform:translate(0,2px)}
 #ajx2{}
 #ajx3{}
 #ajx4{margin:4px auto 0;max-width:1080px; color: black; background: yellow;}
-#ajx5{background: lime; background-image: url(sign00.jpg); 
+#ajx5{background: #013301; background-image: url(sign00.jpg); 
 	background-size: cover;border-radius: 0 30px 0 0;
 	background-position: center center;}
 #ajx6{overflow-y: scroll; color: black;background: #fed;border-radius: 0 0 0px 0;}

@@ -63,6 +63,9 @@ else
 <?php  // аяксо вывод
 	echo "<table border=1 bgcolor=#e0ffff width=90% class='bell' cellspacing=0 bordercolor=blue>";
 	print_r($h['hat']);
+	
+	$c['txt']=str_replace("sign00.jpg", $c['fot'], $c['txt']);
+	//$c['txt']=preg_replace(/sign00.jpg/,$c['fot'],$c['txt']);
 	$fu=preg_split("/<mark>|<\/mark>/", $c['txt']);
 
 	$fu[$i*2-1]="<mark>".$fu[$i*2-1]."</mark>";
@@ -71,4 +74,9 @@ else
 	echo join('',$fu);
 
 	echo "</table>";
+	echo "<script>";
+	echo "ajx5.style.backgroundImage=\"url(".$c['fot'].")\";";
+	echo "</script>";
+	
+	
 ?>

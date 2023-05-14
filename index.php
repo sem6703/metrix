@@ -83,7 +83,7 @@ img{transform:translate(0,2px)}
 	background-size: cover;border-radius: 0 30px 0 0;
 	background-position: center center;}
 #ajx6{overflow-y: scroll; color: black;background: #fed;border-radius: 0 0 0px 0;}
-.pot{width:120px; aspect-ratio:1;background: white;
+.pot{width:120px; aspect-ratio:1;background: transparent;
 position: absolute;bottom:-3px;right:25px;}
 .pot img.dd{margin-top:-5px;display:block;width:124px; aspect-ratio:1;}
 	</style>
@@ -179,9 +179,37 @@ if (!$cu){
 </footer>
 
 <footer id="wanted">4</footer>
+<footer id="kkk">4</footer>
+
+<form id="form1"
+onsubmit="
+event.preventDefault();
+ jQuery.ajax({
+                    url:     'writ.php', //Адрес подгружаемой страницы
+                    type:     'POST', //Тип запроса
+                    dataType: 'html', //Тип данных
+                    data: jQuery('#form1').serialize(), 
+                    success: function(response) { 
+                 //document.getElementById('kkk').innerHTML = response;   
+                },
+                error: function(response) { 
+                }
+             });
+
+"
+
+method="post" action="writ.php">
+<input type="text" name="who" value="губка">
+<textarea name="txt">Живет в лесах Амазонии</textarea>
+<textarea name="img">&lt;img class="dd" src="data:image/gif;base64,R0lGODlhEAAQAPcAANlvNclbKLA/FsJPI9FVJNBTHtFUHOJnLNRkI+iAPO6BPet1M9ZWLU8YFbhxY+eYf99xPN5oNtpiONdkKuZmKedpK95cH+tqLttZHfiMROJvJ+NfIHwhDwAAACEeHcVuWeyRVvChXtdkLd1xNe6CQfB9Pd9eI9xaIb86DtJLHN5PIvVfMf9iOvZdNm8YEUMaHPGaXO93P/Z8ROuMSPSRTOZxMuBcJNlQGt9GHvRWLe1XMfBeN/RwQ/h5RPtvPKVBMvCESed6PeSBP+6WTe+HRuBbI/BzOelmM/24k/ihf/SZeu6QbPWTa/eRavqQaPeJYuhwNOp+PPaFRu99PtdaIexyM9ZUHPJ3Qf/9v/nap/nKo/K3lfm7mPakiN1LS/GUee54OedtLOpeJtZMFORhJuBbHaYnALxJLP7qsPbep/3Tp/i5mPnNqP/BpdQYNeFKUuxvLuReINpLEtRKD9ZQFsM6FHwZDOB6cP/vxfnwwPrGnviUgdF8ZP/XtOQ4Q987R/WKQ+tmJud7NetyL+dcH+FYIpIuE8E3H//DnvXQpvCsifmnisVTQ+eNd/JwZ9Q4OOltLeVaHeh6N+ZpKuxbI/Z6OOt0Rs09FfG3gfnvt/bptf3ot+u9k//Hmf/AkohAOONvLOmNQPvOf+54NeVLFdtLEeFSIP95RtSObP/ktfnktPrMpPzCm/+nfbpYO0gTEeh4NN1ECeluL+aMQ/Cwe/TIkf/RoP6pf+J8dP/dt/3So/ihfbhLLa08HqM7HdJCEN5JF//DkPrbn/vPoPTIk/XMl++icBsAAqJhTf/qrOSMYtRKIb9LGsFWHa1IJMRIHbs8Ee2UYfG0evu4i/++j//ImP+zfuCOaLk6IOZZKLsfAK0fAKYlALdBBLp6X7AvHdFUH//Rl//sr//hqP+4gZpjT08YGWcAAJ8XANVWHdheJ8VGCr5hKtW0l+nu8XwYEZ0mF
+bNBILBILn0tHjgKCigGBkAGBmUNCJ8dE8Q1ItEuH8EhHOLU1Oz1+uv2+QAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIF69ezb+8CRAgRI0iUMHECRQoVCxg0cPAESBAhQ4gUMXIESRIlK1i0cPEGTBgxY8iUMXMGTRo1S5g0cfIIUCBBgwgVMnQIUSJFa9i0cfMKVChRo0iVMnUKVSpVixg1cvQMWDBhw4gVM3YMWTJlq1i1cvUOXDhx48iVM3cOXTp1y5g1c/YQYECBAwkWNHgQYULV4di1c/cSZEiRI0mWNHkSZUqFCxk2dPgUaFChQ4kWNXoUaVKVK1m2dPkWbFixY8mWNXsWbVqlS5k2dfoYcGDBgwkXNnwYcWK1a9m2dfsadGjRo0mXNn0adWrFixk3dvwceCRw4cOJFzd+HHly1atZt3b9Hnx48ePJlzd/Hn165cuZN3f+BAQAOw=="&gt;</textarea>
+<input type="submit">
+</form>
 
 <script src="jq/jquery-2.1.0.min.js"></script>
 <script>
+//$('#kkk').load('writ.php');// 
+/**/
 document.addEventListener("DOMContentLoaded", ()=>{
 	$('#ajx4').load('goat2.php?i=4&t=numr1r');// баня
 	$('#ajx1').load('spis2.php?k=1&e=1&pg=0&id=ix4');//п.б	
@@ -196,7 +224,7 @@ function leventer(){//текущая страница списа (лев)
 
 var lev=0;// страница ноль
 
-leventer();
+//leventer();
 
 
 var levmax=<?php echo "$num" ?>;// страниц в базе групп

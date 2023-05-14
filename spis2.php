@@ -34,8 +34,6 @@ while ($j=mysqli_fetch_assoc($r)){
 			$fot=mysqli_query($cu,"SELECT * FROM fote WHERE id1=".(int)$j['phote']);
 			$cfot=mysqli_fetch_assoc($fot);	
 			echo "<div class='d3' id='di$n'";
-			//echo " onclick='alert(`6lin`)'>";
-			//echo " onclick='fx(13)'>";
 			echo " onclick=\"".$j['fn']."\">";
 			echo $cfot['img']." <tt>";
 			echo ($n+$start)."</tt> ".$pin.$j['ima'];

@@ -1,0 +1,18 @@
+$a=['','1','2','3','4'];
+$a=array('','1','2','3','4');
+LAST_INSERT_ID()
+$k=mysqli_insert_id($cu);
+инкремент поля
+$f=mysqli_query($cu,"UPDATE `grs` SET usa=usa+1 WHERE 1");
+переменная из php в js
+alert('<? echo $n ?>');
+размер таблицы
+$kok=mysqli_query($cu,"SELECT * FROM `kok`"); $e=intval(mysqli_num_rows($kok));
+угловые кавычки без бубна
+echo htmlspecialchars('<a>');
+очистка таблицы
+mysqli_query($cu, "TRUNCATE TABLE `koys`");
+заполнение разводки по алфавиту
+$su_grz=mysqli_query($cu,"SELECT * FROM `grz` ORDER BY `nom`");while($i=mysqli_fetch_assoc($su_grz)){mysqli_query($cu,"INSERT INTO `koys` (`g`) VALUES (".$i['id'].")");}
+двадцать первых символов строки
+substr($s,0,20)

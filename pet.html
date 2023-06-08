@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAOriJ83UI6jEGsfSIungKL7MHtzYJe3iK+3iKevgLO3gJ+vhKc/TJdPXLdPWKrzJOejiKpy/FHmwDavGF/TkI8fVEfDuFvPiGejAK+XMK+3iI83QJKW/FfPlK/XkJunhJ+riLffoKvruJ//qHNDEN7y3kMC9p7+KUufUJMbKO//7Lv/+Kv/yK+ffJ8LPIOTfKOrhKuvgKa+rH2JkQezt//3///////HAqfPmD4WADCEAFZKDKf73Mp/SGHuzF8/TIO3iLvbrKe7lF8jFq/nx8fPv8PXl9tTTLDYIGkQAEEYMFLi2KOrvHejhLOvhKu/lKpuVFayqvgBTXgAtP6nV1cnFDoB6EDoAAi4AAE0bNN/XJezcNOviLPTqKsa5G4WGewBMZAALHqTAyL623OjbF9fYJcfS+GFDO7NkobqrSurOTO3fLOzjKdnPJtrRF8/An77N3q7G3MXHb66kN/PsF/vzF6Osz1w/L7dglKCAaevOSfXrKfvqKPzzBNzQSLqvma+hqPDZC9zPE+3iGvfrD11KZS8BAKhRgpJ/YO7DV+viL+vfLYeBIXl4Tw1qfgBbgI+mtpKSr+jiGfr2Lvv//4p/dst0trSlTevOSurhJ/rvLsbHq//+/wAwPQAHEaPCyNjSG6KTGUkTMCcAAD8EKc3HLuvbLuzhK+reLY6LBaOlqrfIzajJy8TPLEocGEcADT0ABY9/Jv/9J+jgKPPoKrWtGmprSvri5eixX5V5ESwADD8AEqSbK//4Ov/vKLTHHezhL/LmLuriJujgGrKvabzA3c/U/8yidtfOGmZfK6qiJPv3M5rOFoK5DeHbK+nhK+vhK+ngK8/TIvHnKO/hGOvjEOHXD+nDF+a7J+rPNvryJ/fsJ63DFbHJGPrpLOriLOjjKOffLM/TI+ziLO3iLOzfLOriLufiLt7cLcnQSsLLUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewA2ACwAAAAAEAAQAAAI/wABQAABA4gTLmsWKMp0ygkwaOACRAgRI8iTLmz2LNKEilawaOEESBAhQwgUL234MKKTqpYwaeIGTBgxY0iUL276NNqkytawac8IUCBBw4bRN35scDJKjBq0AhVK1CAiBQycP446rbJRrNo4AxZM2CgyJUwcQI88sbJhzBq0AxdO3LBBRYycQJA+2bh17FoMBBhQ4DBiY8wcQZGM4kKGjVyCDClyHKlChs4gSaBa5UqWrZwCDSp0ILFSpg6hSaFc6VKmzdyCDSt2JLlixk4hSqJe7Vq27RwDDix4KMFy5o6hSqNg8WLGDUaDDi16LMmCBs8hS6Ri9WrWDZ0DDy58MCDRkiYPokulZPly5i3dgw8vfjTZokZPIkymZv169k1dQAA7">
+
+	
+	<title>Pet Metrix</title>
+  <style>
+*:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
+body{padding: 33px 0;background-image: linear-gradient(rgba(0,0,0,0.9), #013301); 
+	background-color: #013301;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: white; font-family: sans-serif;
+	}
+.d3{padding: 0 22px;text-align: left;color: black;}
+.d3:nth-child(odd){background:white;}
+.d3:nth-child(even){background:#fed;}
+#ajo0 .d3:hover{background: cyan;}
+.pec{
+	cursor: pointer;text-decoration: none;
+	border-bottom:1px solid black;
+	}
+td{border:1px solid navy;}
+.ihead{padding: 5px 0; background: #f0f8ff;}
+.ileft{padding: 0 12px; text-align: left;}
+.icenter{text-align: center;}
+.a:has(mark){text-decoration: none;}
+.a{
+	text-decoration: underline; 
+	text-decoration-color: green;
+	cursor: pointer;
+	}
+label{padding: 0 0 0 12px;}
+mark{background: springgreen;}
+.nom{text-decoration: underline;cursor: pointer;}
+.buts button{margin:2px;padding:5px 23px;font-size:20px; cursor:pointer;border-radius:6px;}
+.buts span{padding:5px;font-size:20px;}
+.alf button{
+	margin:2px;
+	padding:5px;
+	font-size:15px;
+	cursor:pointer;
+	border-radius:6px;
+	}
+table{width: 100%;
+	background:#e0ffff;
+	border-collapse: separate;
+	border:4px solid blue;}
+.vo{font-size: 30px;}	
+
+img{transform:translate(0,2px)}
+[color='red']{display: none;}
+[color='blue']{display: none}
+.acti { /*подсветка в предбаннике*/
+    color: #000; /* Цвет активных ссылок */
+	font-weight: bold;
+	background-color: lime;
+   }
+.win{
+	margin:0 auto;
+	width:80%;
+	display: grid; 
+	grid-template: 145px 80px/ 3fr 3fr;
+	border:2px solid white;
+	border-radius: 15px 30px 0px 15px;
+	}
+#ajo0{color: black;background: #fed;overflow-y: scroll;border-radius: 15px 0 0 0;}
+#ajo1{color: black;}	
+#ajo2{color: black;padding: 15px 0;background: white;border-radius: 0 0 0 12px;
+	display:flex;align-items:center;border-top:2px solid purple;}
+#ajo3{overflow-y: scroll; color: black;background: #fed;border-radius: 0 0 0px 0;}	
+#ajo4{}
+#ajo5{
+	position: relative;
+	background: #013301; background-image: url(sign00.jpg); 
+	background-size: cover;border-radius: 0 30px 0 0;
+	background-position: center center;}
+#ajo6{margin:4px auto 0;w0idth:90%; max-width:1080px;color: black; background: yellow;}
+
+.pot{width:120px; aspect-ratio:1;background: transparent;
+position: absolute;bottom:-3px;right:25px;}
+.pot img.dd{margin-top:-5px;display:block;width:124px; aspect-ratio:1;}
+#form1{padding:5px; background:maroon;}
+#form2{padding:5px; background:navy;}
+#form3{padding:5px; background:black;}
+#form4{padding:5px; color: black;background:purple;display:flex;flex-direction:column;}
+.addact{margin:0 3px;padding:3px 7px;}
+
+#h11 mark.f{background: yellow;border:2px solid red;}
+#h11 mark{background:#999;}
+#git1,#git2,#git3{color:white;}
+.bla_r,.bla_m{width:fit-content;display:grid;
+	grid-template:1fr 1fr/1fr 1fr 1fr;border:3px solid violet;text-align: center;}
+.bla_d{width:fit-content;display:grid;
+	grid-template:1fr 1fr/1fr 1fr;border:3px solid violet;text-align: center;}
+.blatop{grid-area:1/1/1/4;color: black; background-color:white;}
+.like{margin: 4px;display:inline-block;}
+.x3{grid-area:2/1/3/4;}
+.x3:hover{background:yellow;}
+
+.bla_r button:nth-child(2){position: relative;}
+.bla_r button:nth-child(2):after{content:'';width:19px;aspect-ratio:1; 
+	border:1px solid black;
+	border-radius:50%;position: absolute;top:1px; left:50%;
+	transform:translate(-50%,0);}
+.bn1,.bn2,.bn3{type: button;padding:3px;cursor: pointer;border:1px solid blue;}
+.bn1:hover{background:yellow;}
+  </style>  
+</head>
+<body text="black" bgcolor="white">
+<header style="margin:0 auto;text-align: center;max-width:666px;">
+	<h1 id="h1">Метрические книги. 1881-1918.</h1>	
+	Условные обозначения: 
+	<b>R</b>-родился; R-родил; r-воспреемник новорожденного; 
+	<b>M</b>-вступил в брак; M-родитель новобрачного; m-свидетель на бракосочетании; 
+	<b>D</b>-умер; d-родственник умершего.	
+</header>
+
+<section>
+	<article>
+		<div class="alf">
+			<button onclick="lev=0;leventer();"> А </button>
+			<button onclick="lev=0;leventer();"> Б </button>
+			<button onclick="lev=0;leventer();"> В </button>
+			<button onclick="lev=0;leventer();"> Г </button>
+			<button onclick="lev=0;leventer();"> Д </button>
+			<button onclick="lev=0;leventer();"> Е </button>
+			<button onclick="lev=0;leventer();"> Ж </button>
+			<button onclick="lev=0;leventer();"> З </button>
+			<button onclick="lev=0;leventer();"> И </button>
+			<button onclick="lev=1;leventer();"> К </button>
+			<button onclick="lev=1;leventer();"> Л </button>
+			<button onclick="lev=1;leventer();"> М </button>
+			<button onclick="lev=1;leventer();"> Н </button>
+			<button onclick="lev=1;leventer();"> О </button>
+			<button onclick="lev=1;leventer();"> П </button>
+			<button onclick="lev=1;leventer();"> Р </button>
+			<button onclick="lev=2;leventer();"> С </button>
+			<button onclick="lev=2;leventer();"> Т </button>
+			<button onclick="lev=2;leventer();"> У </button>
+			<button onclick="lev=2;leventer();"> Ф </button>
+			<button onclick="lev=2;leventer();"> Х </button>
+			<button onclick="lev=2;leventer();"> Ц </button>
+			<button onclick="lev=2;leventer();"> Ч </button>
+			<button onclick="lev=2;leventer();"> Ш </button>
+			<button onclick="lev=2;leventer();"> Щ </button>
+			<button onclick="lev=2;leventer();"> Э </button>
+			<button onclick="lev=2;leventer();"> Ю </button>
+			<button onclick="lev=2;leventer();"> Я </button>
+		</div>
+		<div class="buts">
+			<button onclick="lev=0;leventer();"> 0 </button>
+			<button onclick="lev=(lev>0)?(lev-1):0;leventer();"> &lt; </button>
+			<span id="ajo4">0</span>
+			<button onclick="lev=(lev<levmax)?(lev+1):levmax;leventer();"> &gt; </button>
+			<button onclick="lev=levmax;leventer();"> 2 </button>
+		</div>		
+	</article>
+	<div class="win">	
+		<div id="ajo0">
+			<div class="d3" id="di1" onclick="fx(13,0);">
+			 <tt>1</tt> Агути 
+			<a class="pec" title="  |as: Агутти" id="jx20" onclick="event.stopPropagation();fy(this,3,2,0);"> R </a>
+			 </div>
+			 
+			 <div class="d3" id="di2" onclick="fx(15,1);">
+			 <tt>2</tt> Бобер 
+			 </div>
+			 
+			<div class="d3" id="di3" onclick="fx(1,2);">
+			 <tt>3</tt> Бык 
+			 <a class="pec" title="1883 Draco |as: Бык" id="jx4" onclick="event.stopPropagation();fy(this,4,1,2);"> r </a>
+			</div> 
+			 
+			<div class="d3" id="di4" onclick="fx(14,3);">
+			 <tt>4</tt> Губка Боб 
+			 <a class="pec acti" title="  |as: губка Боб" id="jx19" onclick="event.stopPropagation();fy(this,5,2,3);"> R </a>
+			</div> 
+			 
+			<div class="d3" id="di5" onclick="fx(2,4);">
+			 <tt>5</tt> Дракон 
+			 <a class="pec" title="1897  |as: Dragon" id="jx11" onclick="event.stopPropagation();fy(this,1,3,4);"> <b>M</b> </a> 
+			 <a class="pec" title="1903 Drako |as: Дракон" id="jx1" onclick="event.stopPropagation();fy(this,1,1,4);"> <b>R</b> </a>
+			 </div>
+		</div>
+		
+		<div id="ajo5" style="background-image: url('sign01.jpg');">
+		<div class="pot">
+		<img class="dd" src="data:image/gif;base64,R0lGODlhEAAQAPcAAOriJ83UI6jEGsfSIungKL7MHtzYJe3iK+3iKevgLO3gJ+vhKc/TJdPXLdPWKrzJOejiKpy/FHmwDavGF/TkI8fVEfDuFvPiGejAK+XMK+3iI83QJKW/FfPlK/XkJunhJ+riLffoKvruJ//qHNDEN7y3kMC9p7+KUufUJMbKO//7Lv/+Kv/yK+ffJ8LPIOTfKOrhKuvgKa+rH2JkQezt//3///////HAqfPmD4WADCEAFZKDKf73Mp/SGHuzF8/TIO3iLvbrKe7lF8jFq/nx8fPv8PXl9tTTLDYIGkQAEEYMFLi2KOrvHejhLOvhKu/lKpuVFayqvgBTXgAtP6nV1cnFDoB6EDoAAi4AAE0bNN/XJezcNOviLPTqKsa5G4WGewBMZAALHqTAyL623OjbF9fYJcfS+GFDO7NkobqrSurOTO3fLOzjKdnPJtrRF8/An77N3q7G3MXHb66kN/PsF/vzF6Osz1w/L7dglKCAaevOSfXrKfvqKPzzBNzQSLqvma+hqPDZC9zPE+3iGvfrD11KZS8BAKhRgpJ/YO7DV+viL+vfLYeBIXl4Tw1qfgBbgI+mtpKSr+jiGfr2Lvv//4p/dst0trSlTevOSurhJ/rvLsbHq//+/wAwPQAHEaPCyNjSG6KTGUkTMCcAAD8EKc3HLuvbLuzhK+reLY6LBaOlqrfIzajJy8TPLEocGEcADT0ABY9/Jv/9J+jgKPPoKrWtGmprSvri5eixX5V5ESwADD8AEqSbK//4Ov/vKLTHHezhL/LmLuriJujgGrKvabzA3c/U/8yidtfOGmZfK6qiJPv3M5rOFoK5DeHbK+nhK+vhK+ngK8/TIvHnKO/hGOvjEOHXD+nDF+a7J+rPNvryJ/fsJ63DFbHJGPrpLOriLOjjKOffLM/TI+ziLO3iLOzfLOriLufiLt7cLcnQSsLLUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewA2ACwAAAAAEAAQAAAI/wABQAABA4gTLmsWKMp0ygkwaOACRAgRI8iTLmz2LNKEilawaOEESBAhQwgUL234MKKTqpYwaeIGTBgxY0iUL276NNqkytawac8IUCBBw4bRN35scDJKjBq0AhVK1CAiBQycP446rbJRrNo4AxZM2CgyJUwcQI88sbJhzBq0AxdO3LBBRYycQJA+2bh17FoMBBhQ4DBiY8wcQZGM4kKGjVyCDClyHKlChs4gSaBa5UqWrZwCDSp0ILFSpg6hSaFc6VKmzdyCDSt2JLlixk4hSqJe7Vq27RwDDix4KMFy5o6hSqNg8WLGDUaDDi16LMmCBs8hS6Ri9WrWDZ0DDy58MCDRkiYPokulZPly5i3dgw8vfjTZokZPIkymZv169k1dQAA7">		
+		</div></div>	
+
+		
+		<div id="ajo2">
+			<div class="d3">
+			<img class="dd" src="data:image/gif;base64,R0lGODlhEAAQAPcAAOriJ83UI6jEGsfSIungKL7MHtzYJe3iK+3iKevgLO3gJ+vhKc/TJdPXLdPWKrzJOejiKpy/FHmwDavGF/TkI8fVEfDuFvPiGejAK+XMK+3iI83QJKW/FfPlK/XkJunhJ+riLffoKvruJ//qHNDEN7y3kMC9p7+KUufUJMbKO//7Lv/+Kv/yK+ffJ8LPIOTfKOrhKuvgKa+rH2JkQezt//3///////HAqfPmD4WADCEAFZKDKf73Mp/SGHuzF8/TIO3iLvbrKe7lF8jFq/nx8fPv8PXl9tTTLDYIGkQAEEYMFLi2KOrvHejhLOvhKu/lKpuVFayqvgBTXgAtP6nV1cnFDoB6EDoAAi4AAE0bNN/XJezcNOviLPTqKsa5G4WGewBMZAALHqTAyL623OjbF9fYJcfS+GFDO7NkobqrSurOTO3fLOzjKdnPJtrRF8/An77N3q7G3MXHb66kN/PsF/vzF6Osz1w/L7dglKCAaevOSfXrKfvqKPzzBNzQSLqvma+hqPDZC9zPE+3iGvfrD11KZS8BAKhRgpJ/YO7DV+viL+vfLYeBIXl4Tw1qfgBbgI+mtpKSr+jiGfr2Lvv//4p/dst0trSlTevOSurhJ/rvLsbHq//+/wAwPQAHEaPCyNjSG6KTGUkTMCcAAD8EKc3HLuvbLuzhK+reLY6LBaOlqrfIzajJy8TPLEocGEcADT0ABY9/Jv/9J+jgKPPoKrWtGmprSvri5eixX5V5ESwADD8AEqSbK//4Ov/vKLTHHezhL/LmLuriJujgGrKvabzA3c/U/8yidtfOGmZfK6qiJPv3M5rOFoK5DeHbK+nhK+vhK+ngK8/TIvHnKO/hGOvjEOHXD+nDF+a7J+rPNvryJ/fsJ63DFbHJGPrpLOriLOjjKOffLM/TI+ziLO3iLOzfLOriLufiLt7cLcnQSsLLUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewA2ACwAAAAAEAAQAAAI/wABQAABA4gTLmsWKMp0ygkwaOACRAgRI8iTLmz2LNKEilawaOEESBAhQwgUL234MKKTqpYwaeIGTBgxY0iUL276NNqkytawac8IUCBBw4bRN35scDJKjBq0AhVK1CAiBQycP446rbJRrNo4AxZM2CgyJUwcQI88sbJhzBq0AxdO3LBBRYycQJA+2bh17FoMBBhQ4DBiY8wcQZGM4kKGjVyCDClyHKlChs4gSaBa5UqWrZwCDSp0ILFSpg6hSaFc6VKmzdyCDSt2JLlixk4hSqJe7Vq27RwDDix4KMFy5o6hSqNg8WLGDUaDDi16LMmCBs8hS6Ri9WrWDZ0DDy58MCDRkiYPokulZPly5i3dgw8vfjTZokZPIkymZv169k1dQAA7">
+			 <tt>4</tt> Губка Боб 
+			 <a class="pec acti" title="  |as: губка Боб" id="ix19" onclick="event.stopPropagation();fb(this,5,2,3,0);"> R </a>
+			 </div>
+		</div>		
+		
+		<div id="ajo3">Живет на дне океана.</div>		
+	</div>
+</section>
+
+<section style="margin:0 auto; display:flex;
+	width:90%;max-width:1080px;">
+	<div style="width:35px;background: gold;clip-path: polygon(0 50%, 100% 0, 100% 100%);" onclick="let i=+kkk.innerText;i=1+(i+3)%5;kkk.innerText=i;rose.value=i;lot.value=i;
+	$('#ajo6').load('goat3.php?t='+i);// баня
+	"></div>
+	<div id="ajo6">
+
+<table cellspacing="0"><tbody><tr>
+				<td rowspan="2" bgcolor="#efefff" class="ileft">
+				Скрин
+				</td>
+				<td colspan="2" class="ihead">Счет рожд.</td>
+				<td colspan="2" class="ihead">Месяц и день</td>
+				<td rowspan="2" class="ihead">Имена родившихся</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия родителей и какого вероисповедания</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия восприемников</td>
+				</tr>
+				<tr>
+				<td class="ihead">Муж.</td>
+				<td class="ihead">Жен.</td>
+				<td class="ihead">Рождение</td>
+				<td class="ihead">Крещение<br></td>
+				</tr>				<tr>
+				<td bgcolor="white" class="icenter">
+				<a href="sign00.jpg" target="_blank" style="cursor: pointer;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+				  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+				  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
+				</svg></a><br>
+				</td>
+				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>
+				<td><span class="a vo"> <span onclick="fj('jx1', 1,1,4,0,4);">Дракон</span></span><br></td>
+				<td class="ileft">
+				Деревни крестьянин<br>
+				<span class="a"><span onclick="fj('jx2', 2,1,2,1,7);">Крыс</span></span><br>
+				и законная жена его<br>
+				<span class="a"><span onclick="fj('jx3', 3,1,0,2,10);">Овца</span></span><br>
+				оба православные<br>
+				</td><td class="ileft">
+				Деревни крестьянин <span class="a"><span onclick="fj('jx4', 4,1,2,0,2);">Бык</span></span><br>
+				крестьянская девица <span class="a"><span onclick="fj('jx5', 5,1,4,1,9);">Обезьяна</span></span></td></tr></tbody></table>
+	</div>
+	<div style="width:35px;background: gold;clip-path: polygon(100% 50%, 0 0, 0 100%);" onclick="let i=+kkk.innerText;i=1+i%5;kkk.innerText=i;rose.value=i;lot.value=i;
+	$('#ajo6').load('goat3.php?t='+i);// баня
+	"></div>
+<!--  -->	
+</section>
+
+<footer>
+По материалам сайта <a href="https://www.familysearch.org" style="color: #ffff00">familysearch.org</a>
+</footer>
+<footer id="wanted">15</footer>
+<footer id="kkk">1</footer>
+
+<div style="margin: 0 auto;display: flex;width:fit-content;">
+	<button class="addact" onclick="acta(1);// добавление акта	
+	">Add Born</button>
+	<button class="addact" onclick="acta(2);// добавление акта	
+	">Add Marry</button>
+	<button class="addact" onclick="acta(3);// добавление акта	
+	">Add Death</button>	
+</div>
+
+
+<form id="form1" onsubmit="
+event.preventDefault();
+jQuery.ajax({
+			url:     'form1.php', //Адрес подгружаемой страницы
+			type:     'POST', //Тип запроса
+			dataType: 'html', //Тип данных
+			data: $('#form1').serialize(), 
+			success: function(response) { 
+			//document.getElementById('kkk').innerHTML = response;   
+			//alert(response);
+			hoy.value=response;
+		},
+		error: function(response) { 
+		//alert('пока');
+		}
+	});
+" method="post" action="">
+<input type="text" name="who" value="Губка Боб">
+<textarea name="txt">Живет на дне океана.</textarea>
+<textarea name="img">&lt;img class="dd" src="data:image/gif;base64,R0lGODlhEAAQAPcAAOriJ83UI6jEGsfSIungKL7MHtzYJe3iK+3iKevgLO3gJ+vhKc/TJdPXLdPWKrzJOejiKpy/FHmwDavGF/TkI8fVEfDuFvPiGejAK+XMK+3iI83QJKW/FfPlK/XkJunhJ+riLffoKvruJ//qHNDEN7y3kMC9p7+KUufUJMbKO//7Lv/+Kv/yK+ffJ8LPIOTfKOrhKuvgKa+rH2JkQezt//3///////HAqfPmD4WADCEAFZKDKf73Mp/SGHuzF8/TIO3iLvbrKe7lF8jFq/nx8fPv8PXl9tTTLDYIGkQAEEYMFLi2KOrvHejhLOvhKu/lKpuVFayqvgBTXgAtP6nV1cnFDoB6EDoAAi4AAE0bNN/XJezcNOviLPTqKsa5G4WGewBMZAALHqTAyL623OjbF9fYJcfS+GFDO7NkobqrSurOTO3fLOzjKdnPJtrRF8/An77N3q7G3MXHb66kN/PsF/vzF6Osz1w/L7dglKCAaevOSfXrKfvqKPzzBNzQSLqvma+hqPDZC9zPE+3iGvfrD11KZS8BAKhRgpJ/YO7DV+viL+vfLYeBIXl4Tw1qfgBbgI+mtpKSr+jiGfr2Lvv//4p/dst0trSlTevOSurhJ/rvLsbHq//+/wAwPQAHEaPCyNjSG6KTGUkTMCcAAD8EKc3HLuvbLuzhK+reLY6LBaOlqrfIzajJy8TPLEocGEcADT0ABY9/Jv/9J+jgKPPoKrWtGmprSvri5eixX5V5ESwADD8AEqSbK//4Ov/vKLTHHezhL/LmLuriJujgGrKvabzA3c/U/8yidtfOGmZfK6qiJPv3M5rOFoK5DeHbK+nhK+vhK+ngK8/TIvHnKO/hGOvjEOHXD+nDF+a7J+rPNvryJ/fsJ63DFbHJGPrpLOriLOjjKOffLM/TI+ziLO3iLOzfLOriLufiLt7cLcnQSsLLUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewA2ACwAAAAAEAAQAAAI/wABQAABA4gTLmsWKMp0ygkwaOACRAgRI8iTLmz2LNKEilawaOEESBAhQwgUL234MKKTqpYwaeIGTBgxY0iUL276NNqkytawac8IUCBBw4bRN35scDJKjBq0AhVK1CAiBQycP446rbJRrNo4AxZM2CgyJUwcQI88sbJhzBq0AxdO3LBBRYycQJA+2bh17FoMBBhQ4DBiY8wcQZGM4kKGjVyCDClyHKlChs4gSaBa5UqWrZwCDSp0ILFSpg6hSaFc6VKmzdyCDSt2JLlixk4hSqJe7Vq27RwDDix4KMFy5o6hSqNg8WLGDUaDDi16LMmCBs8hS6Ri9WrWDZ0DDy58MCDRkiYPokulZPly5i3dgw8vfjTZokZPIkymZv169k1dQAA7"&gt;
+</textarea>
+<input type="submit">
+</form>
+
+<form id="form2" onsubmit="
+event.preventDefault();
+jQuery.ajax({
+			url:     'form2.php', //Адрес подгружаемой страницы
+			type:     'POST', //Тип запроса
+			dataType: 'html', //Тип данных
+			data: $('#form2').serialize(), 
+			success: function(response) { 
+			//h1.innerHTML = response;   
+			tot.value=response;
+		},
+		error: function(response) { 
+		}
+	});
+" method="post" action="">
+<label>Group<input type="number" name="g" value="13" id="hoy"></label>
+<label>Act<input type="number" name="act" value="2" id="rose"></label>
+<input type="submit">
+</form>
+
+<form id="form3" onsubmit="
+event.preventDefault();
+$.ajax({
+			url:     'form3part1.php', //Адрес подгружаемой страницы
+			type:     'POST', //Тип запроса
+			dataType: 'html', //Тип данных
+			data: $('#form3').serialize(), 
+			success: function(response) { 
+			//document.getElementById('kkk').innerHTML = response; 
+			//alert(response);
+			art.innerHTML=response;
+			//
+			h11.innerHTML='<table>'+tot.value+'</table>';
+			//foo();	// расчет а б для этого
+			jQuery.ajax({
+						url:     'form3part2.php', //Адрес подгружаемой страницы
+						type:     'POST', //Тип запроса
+						dataType: 'html', //Тип данных
+						data: $('#form3').serialize(), 
+						success: function(response) { 
+						foo(eval(response));
+						//alert(response);
+					},
+					error: function(response) { 
+					}
+				});			
+			
+		},
+		error: function(response) { 
+		}
+	});
+
+" method="post" action="">
+<label>Act<input type="number" name="act" value="2" id="lot"></label>
+<textarea name="txt" style="width:444px;height:222px;" id="tot">&lt;tr&gt;
+    &lt;td bgcolor="white" class="icenter"&gt;
+    &lt;a href="sign00.jpg" target="_blank" style="cursor: pointer;"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16"&gt;
+      &lt;path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"&gt;&lt;/path&gt;
+      &lt;path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;&lt;br&gt;
+    &lt;/td&gt;
+    &lt;td&gt;33&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt; 8 окт 1890&lt;/b&gt;&lt;/td&gt;&lt;td&gt;11&lt;br&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;span class="a vo"&gt;&lt;span onclick="fj('jx1', 1, 'numr1r',3,0);"&gt;Дракон&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/td&gt;
+    &lt;td class="ileft"&gt;
+    Деревни крестьянин&lt;br&gt;
+    &lt;span class="a"&gt;&lt;span onclick="fj('jx2', 2, 'numr1r',2,1);"&gt;Крыс&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+    и законная жена его&lt;br&gt;
+    &lt;span class="a"&gt;&lt;span onclick="fj('jx3', 3, 'numr1r',1,2);"&gt;Овца&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+    оба православные&lt;br&gt;
+    &lt;/td&gt;&lt;td class="ileft"&gt;
+    Деревни крестьянин &lt;span class="a"&gt;&lt;span onclick="fj('jx4', 4, 'numr1r',1,0);"&gt;&lt;mark&gt;Бык&lt;/mark&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+    крестьянская девица &lt;span class="a"&gt;&lt;span onclick="fj('jx5', 5, 'numr1r',0,2);"&gt;Обезьяна&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+</textarea>
+<input type="submit">
+</form>
+
+
+<form id="form4" onsubmit="
+event.preventDefault();
+/**/
+jQuery.ajax({
+			url:     'form4.php', //Адрес подгружаемой страницы
+			type:     'POST', //Тип запроса
+			dataType: 'html', //Тип данных
+			data: {avon: JSON.stringify(avon)},//jQuery('#form4').serialize(), 
+			success: function(response) { 
+			//document.getElementById('kkk').innerHTML = response; 
+			console.log(response);
+		},
+		error: function(response) { 
+		}
+	});
+//alert(avon);
+//console.table(avon);	
+" method="post" action="">
+
+
+<div id="h11" style="order:4;" contenteditable="true">
+<table border="1" bgcolor="#e0ffff" width="90%" cellspacing="0" bordercolor="blue"><tbody><tr>
+				<td rowspan="2" bgcolor="#efefff" class="ileft">
+				Скрин
+				</td>
+				<td colspan="2" class="ihead">Счет рожд.</td>
+				<td colspan="2" class="ihead">Месяц и день</td>
+				<td rowspan="2" class="ihead">Имена родившихся</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия родителей и какого вероисповедания</td>
+				<td rowspan="2" class="ihead">Звание, имя, отчество и фамилия восприемников</td>
+				</tr>
+				<tr>
+				<td class="ihead">Муж.</td>
+				<td class="ihead">Жен.</td>
+				<td class="ihead">Рождение</td>
+				<td class="ihead">Крещение<br></td>
+				</tr>				<tr>
+				<td bgcolor="white" class="icenter">
+				<a href="sign00.jpg" target="_blank" style="cursor: pointer;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+				  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+				  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
+				</svg></a><br>
+				</td>
+				<td>33<br></td><td><br></td><td><b> 8 окт 1890</b></td><td>11<br></td>
+				<td><span class="a vo"><span onclick="fj('jx1', 1, 'numr1r',3,0);">           <mark>Дракон</mark>      </span></span><br></td>
+				<td class="ileft">
+				Деревни крестьянин<br>
+				<span class="a"><span onclick="fj('jx2', 2, 'numr1r',2,1);">
+				           <mark>Крыс</mark> </span></span><br>
+				и законная жена его<br>
+				<span class="a"><span onclick="fj('jx3', 3, 'numr1r',1,2);">
+				        <mark>Овца</mark></span></span><br>
+				оба православные<br>
+				</td><td class="ileft">
+				Деревни крестьянин <span class="a"><span onclick="fj('jx4', 4, 'numr1r',1,0);">
+				       <mark>Бык </mark></span></span><br>
+				крестьянская девица <span class="a"><span onclick="fj('jx5', 5, 'numr1r',0,2);">
+				     <mark>Обезьяна</mark> </span></span></td></tr></tbody></table>
+</div>	
+<input type="submit" style="margin:0 auto;order:5;width:100px;">
+</form>
+
+<main id="art" style="order:1;"><div id="git1"><div class="like"><div class="bla_r"><div class="blatop">Хз</div><button class="x3"><b>хз</b></button></div></div><div class="like"><div class="bla_r" data-g="2" data-id="1" data-bj="0"><div class="blatop">дракон</div><button class="bn1"><b>R</b></button><button class="bn1">R</button><button class="bn1">r</button></div></div><div class="like"><div class="bla_r" data-g="5" data-id="2" data-bj="0"><div class="blatop">крыса</div><button class="bn1"><b>R</b></button><button class="bn1">R</button><button class="bn1">r</button></div></div><div class="like"><div class="bla_r" data-g="8" data-id="3" data-bj="0"><div class="blatop">овца</div><button class="bn1"><b>R</b></button><button class="bn1">R</button><button class="bn1">r</button></div></div><div class="like"><div class="bla_r" data-g="1" data-id="4" data-bj="0"><div class="blatop">бык</div><button class="bn1"><b>R</b></button><button class="bn1">R</button><button class="bn1">r</button></div></div><div class="like"><div class="bla_r" data-g="7" data-id="5" data-bj="0"><div class="blatop">обезьяна</div><button class="bn1"><b>R</b></button><button class="bn1">R</button><button class="bn1">r</button></div></div></div>1</main>
+
+ 
+<script>
+
+</script>   
+</body>
+</html>

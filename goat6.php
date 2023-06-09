@@ -5,6 +5,7 @@ header ("Content-Type: text/html; charset=utf-8");
 // выход заполненная хтмл таблица акта
 //echo 'tuyry ar6ia54i6aizy67azzr5s7kost5om7st5ok7st8osxo tksdt68o';
 $sz=11;//7;//5;//
+$h="<a href=\"sign00.jpg\" target=\"_blank\" style=\"cursor: pointer;\">\r\n <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-camera-fill\" viewBox=\"0 0 16 16\">\r\n<path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z\"></path>\r\n <path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z\"></path>\r\n </svg></a>";
 if ($_POST['act']){	
 	$t = $_POST['act'];//
 	if ($_POST['i']){$i=$_POST['i'];}else{$i=1;}
@@ -67,7 +68,15 @@ $agu=array();//$agu=[];// вызов функции из клика
 	
 	$a['txt']="<table cellspacing=0>";
 	$a['txt'].=($hat['hat']);	
-	$kok['txt']=str_replace("sign00.jpg", $kok['fot'], $kok['txt']);
+	
+	if(empty($kok['fam'])){
+	$kok['txt']=str_replace('yyy','', $kok['txt']);// фотик
+	}else{
+	$kok['txt']=str_replace('yyy',$h, $kok['txt']);// фотик
+	$kok['txt']=str_replace("sign00.jpg", $kok['fam'], $kok['txt']);	
+	}
+	//$kok['txt']=str_replace("sign00.jpg", $kok['fot'], $kok['txt']);
+	
 	$fu=preg_split("/<mark>|<\/mark>/", $kok['txt']);
 	$fu[$svet*2-1]="<mark>".$fu[$svet*2-1]."</mark>";
 		
@@ -76,6 +85,7 @@ $agu=array();//$agu=[];// вызов функции из клика
 		{$fu[$ii]=$agu[(int)($ii/2)].'<span class="a">'.$fu[$ii].'</span></span>'; $ii=$ii+2;}
 	$a['txt'].= join('',$fu);//echo
 	$a['txt'].= "</table>";//echo
+	
 	
 	$a['fot']=$kok['fot'];
 	$a['id']=$kok['id'];	

@@ -11,7 +11,7 @@ if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 	$a=array(xa=>'xaxaxa');
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu)
 	{
 		echo 'база ноу коннект';	
@@ -47,19 +47,19 @@ $n=0;
 while ($grz=mysqli_fetch_assoc($su_grz)){
 $n++;	
 	if ($grz['fot']>0){
-			
-			$fote=rec($cu,"SELECT * FROM fote WHERE id=".(int)$grz['fot']);	
+		//$a['txt'].="<mark>o</mark>";	
+		$fote=rec($cu,"SELECT * FROM fote WHERE id=".(int)$grz['fot']);	
 
-			$a['txt'].="<div class='d3' onclick='fox(".$grz['id'].")'>";
-			
-			//$a['txt'].= " onclick=\"fx(".$grz['id'].");\">";//		
-			$a['txt'].= $fote['img']." <tt>";
-			$a['txt'].= ($pg*$sz+$n)."</tt> ".$grz['nom'];
-			}
-			else
-			{// id='dj1'
-			$a['txt']= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom'];//
-			}
+		$a['txt'].="<div class='d3' onclick='fox(".$grz['id'].")'>";
+		
+		//$a['txt'].= " onclick=\"fx(".$grz['id'].");\">";//		
+		$a['txt'].= $fote['img']." <tt>";
+		$a['txt'].= ($pg*$sz+$n)."</tt> ".$grz['nom'];
+		}
+	else
+		{// id='dj1'
+		$a['txt'].= "<div class='d3' id='di".$n."' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom'];
+		}
 		
    $d=mysqli_query($cu,"SELECT * FROM `ava` WHERE `g`='".
 		(int)$grz['id']."' ORDER BY `god`"); //все акты персоны
@@ -87,8 +87,9 @@ $n++;
 
 
 			}// аватары
+	/*$avis='';*/	
 		$a['txt'].= $avis.'</div>'; 
-/**/
+
 	}//while
 
 	//-----------------------------------
@@ -97,6 +98,7 @@ $n++;
 //**************************************************************
 
  $a['g']=$g;
+ $a['n']=$n;
 	
 echo json_encode($a);
 

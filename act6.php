@@ -4,7 +4,7 @@ header ("Content-Type: text/html; charset=utf-8");
 // вход тип акта
 // добавление акта
 
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{

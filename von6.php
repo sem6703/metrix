@@ -6,7 +6,7 @@ header ("Content-Type: text/html; charset=utf-8");
 	
 $gid=(isset($_POST['i']))?($_POST['i']):-1;
 	
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{

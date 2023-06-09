@@ -3,6 +3,7 @@ header ("Content-Type: text/html; charset=utf-8");
 
 // вход акт
 // выход заполненная хтмл таблица акта
+//echo 'tuyry ar6ia54i6aizy67azzr5s7kost5om7st5ok7st8osxo tksdt68o';
 $sz=11;//7;//5;//
 if ($_POST['act']){	
 	$t = $_POST['act'];//
@@ -11,7 +12,7 @@ if ($_POST['act']){
 
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu)
 	{
 		echo 'база ноу коннект';	
@@ -31,7 +32,7 @@ $waw=rec($cu,"SELECT * FROM `ava` WHERE `id`=".(int)$i);
 $svet=($t==$waw['act'])?$waw['svet']:0;
 //***************
 $agu=array();//$agu=[];// вызов функции из клика
-		
+	
 	$s_j="SELECT * FROM `ava` WHERE `act`=".(int)$t." ORDER BY `svet`";
 	$su_ava=mysqli_query($cu,$s_j);//
 	

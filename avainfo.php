@@ -11,7 +11,7 @@ if ($_POST['ava']){
 
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu)
 	{
 		echo 'база ноу коннект';	
@@ -28,7 +28,8 @@ else
 		}
 //*************************************
 $v=rec($cu,"SELECT * FROM `ava` WHERE `id`=$ava");
-$a['rq']="SELECT * FROM `ava` WHERE `id`=$ava";
+//$a['rq']="SELECT * FROM `ava` WHERE `id`=$ava";
+$a['rq']="SELECT * FROM `koys` WHERE `g`=".(int)$v['g'];
 $a['g']=$v['g'];
 $a['act']=$v['act'];
 $a['god']=$v['god'];
@@ -37,10 +38,10 @@ $a['he']=$v['he'];
 $a['role']=$v['role'];
 $a['svet']=$v['svet'];
 $w=rec($cu,"SELECT * FROM `koys` WHERE `g`=".(int)$v['g']);
-$a['id']=$w['id'];////
+$a['id']=$w['id'];
 $a['pg']=(($w['id']-1)-($w['id']-1)%$sz)/$sz;
 $a['koy']=($w['id']-1)%$sz;//
-
+/*      */
 	//-----------------------------------
 	mysqli_close($cu);   
 	}

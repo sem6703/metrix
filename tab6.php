@@ -28,7 +28,7 @@ table:nth-child(4n+3){border:3px solid purple;}
 // вход тип акта
 // добавление акта
 
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{

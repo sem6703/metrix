@@ -7,7 +7,7 @@ header ("Content-Type: text/html; charset=utf-8");
 $avaid=(isset($_GET['i']))?($_GET['i']):-1;	
 
 
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{
@@ -27,6 +27,7 @@ if (!$cu){
 	$fote=rec($cu,"SELECT * FROM `fote` WHERE `id`=".(int)$grz['fot']);
 	
 echo "<div class='pot'>";
+//$fote['img']=str_replace('<img', '<img class="dd" ', $fote['img']);
 echo $fote['img'];
 echo "</div>";	
 //----------------------------------

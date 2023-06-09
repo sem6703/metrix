@@ -143,7 +143,8 @@ position: absolute;bottom:-3px;right:25px;}
 		<div class="alf">
 			<!--  -->
 <?php
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{
@@ -162,7 +163,7 @@ if (!$cu){
 		mysqli_query($cu,"INSERT INTO `koys` (`g`) VALUES (".$i['id'].")");// цивилизованный 		
 	}
 	//***********
-	$c=array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','А','Б','В','Г','Д','Е','Ж','З','И','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х','Ц','Ч','Ш','Щ','Э','Ю','Я');
+	$c=array('?','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','А','Б','В','Г','Д','Е','Ж','З','И','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х','Ц','Ч','Ш','Щ','Э','Ю','Я');
 	function cube($n){return 1;}
 	$b = array_map('cube', $c);
 	
@@ -193,7 +194,7 @@ if (!$cu){
 }
 //-----------------------------------
 	mysqli_close($cu);  
-	for($i=26;$i<count($c);$i++){
+	for($i=27;$i<count($c);$i++){
 		echo '<button '
 		.'title="'
 		.(int)($b[$i])
@@ -354,7 +355,7 @@ method="post" action="">
 <script>
 <?php
 if (isset($_GET['ava']))$avaid=$_GET['ava']; else $avaid=5;		
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{
@@ -385,29 +386,37 @@ http://pet/index.php?ava=4
 http://pet/index.php?ava=8
 http://pet/index.php?ava=13
 */
-
+console.log('body loaded');
 document.addEventListener("DOMContentLoaded", ()=>{
 	 	post('avainfo.php',// инфо	
 		{ava:<? echo (int)$avaid ?>},
 	function(response){
-		//alert('spi');
+		console.log('info <? echo (int)$avaid ?> loaded ');
 		let r=JSON.parse(response);console.log(r);////
 		
 		goat(<? echo (int)$act ?>,<? echo (int)$avaid ?>);// баня
-		pban(0,<? echo $avaid ?>);	//п.б	
-		list(0,<? echo $avaid ?>);// лист
+
+		pban(0,<? echo $avaid ?>);//	//п.б 0
+
+		list(r['g'],<? echo $avaid ?>);// лист 0
+
 		$('#ajo5').load('nes6.php?i=<? echo $avaid ?>');// портрет с авы
-		$('#ajo3').load('ano6.php?i=<? echo $avaid ?>');// анотация с авы		
+
+		$('#ajo3').load('ano6.php?i=<? echo $avaid ?>');// анотация с авы	
+
+		//document.querySelector('.pot img')?.classList.add('dd');// портрет 120px
 		wantGroup.innerText=r['g'];
 		wantAva.innerText=<? echo $avaid ?>;
 		lev=r['pg'];
-		leventer();		
+		leventer();	
+		console.log('pager loaded');
 	})
 });
 		
 function leventer(){//текущая страница списка (лев)
-	$('#ajo4').load('lev5.php?count='+lev);// счетчик
+	
 	page(lev,+wantAva.innerText);
+	$('#ajo4').load('lev5.php?count='+lev);// счетчик
 }
 
 var lev=0;// страница ноль
@@ -419,10 +428,11 @@ function fox(g){// клик на полосе
 		{i:g},
 		function(response){//
 		let r=JSON.parse(response);//console.log(response);
-		ajo5.innerHTML="<div class='pot'>"+r['img']+"</div>";// портрет
+		//ajo5.innerHTML="<div class='pot'>"+r['img']+"</div>";// портрет
+		ajo5.innerHTML="<div class='pot'>"+((r['img'])?r['img']:'')+"</div>";// портрет		
 		ajo3.innerHTML=r['txt'];// аннотация
 		});	
-	pban(g);// п/б
+	pban(g);// п/б//
 }
 
 function foy(ava){// клик на листе
@@ -434,7 +444,8 @@ function foy(ava){// клик на листе
 		pban(r['g'],ava);
 		list(r['g'],ava);	
 		$('#ajo5').load('nes6.php?i='+ava);// портрет с авы
-		$('#ajo3').load('ano6.php?i='+ava);// анотация с 		
+		$('#ajo3').load('ano6.php?i='+ava);// анотация с 
+		//document.querySelector('.pot img')?.classList.add('dd');// портрет 120px
 		wantAva.innerText=ava;		
 	})   
 }
@@ -460,7 +471,8 @@ function foj(ava){//клик на бани
 		let r=JSON.parse(response);//console.log(r);//
 		goat(r['act'],ava);// баня		
 		$('#ajo5').load('nes6.php?i='+ava);// портрет с авы
-		$('#ajo3').load('ano6.php?i='+ava);// анотация с 		
+		$('#ajo3').load('ano6.php?i='+ava);// анотация с 
+		//document.querySelector('.pot img')?.classList.add('dd');// портрет 120px
 		pban(r['g'],ava);
 		wantGroup.innerText=r['g'];
 		wantAva.innerText=ava;
@@ -562,7 +574,7 @@ function pban(g,ava){
 }
 function list(g,ava){
 	post('list6.php',// лист	
-		{g:g,ava:ava},
+		{g:+g,ava:+ava},
 	function(response){
 		let r=JSON.parse(response);//console.log(r);//
 		ajo0.innerHTML=r['txt'];

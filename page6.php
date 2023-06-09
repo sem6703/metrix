@@ -11,7 +11,7 @@ if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 	$a=array(xa=>'xaxaxa');
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
 if (!$cu)
 	{
 		echo 'база ноу коннект';	
@@ -46,7 +46,7 @@ $n++;
 			}
 			else
 			{// id='dj1'
-			$a['txt']= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom'];//
+			$a['txt'].= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom'];//
 			}
 		
    $d=mysqli_query($cu,"SELECT * FROM `ava` WHERE `g`='".

@@ -20,3 +20,5 @@ substr($s,0,20)
 str_replace('<img', '<img class="dd" ', $fote['img']);
 кроссмодульные переменные
 include 'var6.php';
+рандомные фото крестьян
+https://www.youtube.com/shorts/Dtmm0rpW1d8

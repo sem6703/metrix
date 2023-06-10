@@ -1,12 +1,13 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
 
+include 'var6.php';
 // вход группа
 //	выход портрет
 	
 $gid=(isset($_POST['i']))?($_POST['i']):-1;
-	
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{

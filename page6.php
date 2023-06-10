@@ -1,9 +1,8 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
 
+include 'var6.php';
 
-
-$sz=11;//7;//5;//
 if (($_POST['pg'])) $pg=$_POST['pg']; else $pg=0;// страница
 if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 
@@ -11,7 +10,7 @@ if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 	$a=array(xa=>'xaxaxa');
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
 if (!$cu)
 	{
 		echo 'база ноу коннект';	
@@ -38,15 +37,15 @@ $n++;
 			
 			$fote=rec($cu,"SELECT * FROM fote WHERE id=".(int)$grz['fot']);	
 
-			$a['txt'].="<div class='d3' onclick='fox(".$grz['id'].")'>";
+			$a['txt'].="<div class='d3 d4' onclick='fox(".$grz['id'].")'>";
 			
 			//$a['txt'].= " onclick=\"fx(".$grz['id'].");\">";//		
 			$a['txt'].= $fote['img']." <tt>";
-			$a['txt'].= ($pg*$sz+$n)."</tt> ".$grz['nom'];
+			$a['txt'].= ($pg*$sz+$n)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";
 			}
 			else
 			{// id='dj1'
-			$a['txt']= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom'];//
+			$a['txt'].= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";//
 			}
 		
    $d=mysqli_query($cu,"SELECT * FROM `ava` WHERE `g`='".

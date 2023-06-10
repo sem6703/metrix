@@ -16,3 +16,9 @@ mysqli_query($cu, "TRUNCATE TABLE `koys`");
 $su_grz=mysqli_query($cu,"SELECT * FROM `grz` ORDER BY `nom`");while($i=mysqli_fetch_assoc($su_grz)){mysqli_query($cu,"INSERT INTO `koys` (`g`) VALUES (".$i['id'].")");}
 двадцать первых символов строки
 substr($s,0,20)
+замена подстроки
+str_replace('<img', '<img class="dd" ', $fote['img']);
+кроссмодульные переменные
+include 'var6.php';
+рандомные фото крестьян
+https://www.youtube.com/shorts/Dtmm0rpW1d8

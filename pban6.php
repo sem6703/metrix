@@ -1,9 +1,8 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
 
+include 'var6.php';
 
-
-$sz=11;//7;//5;//
 if (($_POST['g'])) $g=$_POST['g']; else $g=0;// група
 if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 
@@ -11,7 +10,7 @@ if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 	$a=array(xa=>'xaxaxa');
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
 if (!$cu)
 	{
 		echo 'база ноу коннект';	
@@ -46,11 +45,11 @@ $grz=rec($cu,"SELECT * FROM `grz` ORDER BY `nom` LIMIT ".(int)($pg*$sz+$koy).",1
 			
 		
 			$a['txt'].= $fote['img']." <tt>";
-			$a['txt'].= ($pg*$sz+$koy+1)."</tt> ".$grz['nom'];
+			$a['txt'].= ($pg*$sz+$koy+1)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";
 			}
 			else
 			{// id='dj1'
-			$a['txt']= "<div class='d3'> <tt>".($pg*$sz+$koy+1)."</tt> ".$grz['nom'];//
+			$a['txt']= "<div class='d3'> <tt>".($pg*$sz+$koy+1)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";//
 			}
    $d=mysqli_query($cu,"SELECT * FROM `ava` WHERE `g`='".
 		(int)$grz['id']."' ORDER BY `god`"); //все акты персоны

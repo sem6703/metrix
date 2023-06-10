@@ -37,15 +37,15 @@ $n++;
 			
 			$fote=rec($cu,"SELECT * FROM fote WHERE id=".(int)$grz['fot']);	
 
-			$a['txt'].="<div class='d3' onclick='fox(".$grz['id'].")'>";
+			$a['txt'].="<div class='d3 d4' onclick='fox(".$grz['id'].")'>";
 			
 			//$a['txt'].= " onclick=\"fx(".$grz['id'].");\">";//		
 			$a['txt'].= $fote['img']." <tt>";
-			$a['txt'].= ($pg*$sz+$n)."</tt> ".$grz['nom'];
+			$a['txt'].= ($pg*$sz+$n)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";
 			}
 			else
 			{// id='dj1'
-			$a['txt'].= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom'];//
+			$a['txt'].= "<div class='d3' id='di$n' onclick='fox(".$grz['id'].")'> <tt>".($pg*$sz+$n)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";//
 			}
 		
    $d=mysqli_query($cu,"SELECT * FROM `ava` WHERE `g`='".

@@ -22,9 +22,11 @@ body{padding: 33px 0;background-image: linear-gradient(rgba(0,0,0,0.9), #013301)
 	text-align: center;
 	color: white; font-family: sans-serif;
 	}
-.d3{padding: 0 22px;text-align: left;color: black;}
+.d3{padding: 0 28px;text-align: left;color: black;}
 .d3:nth-child(odd){background:white;}
 .d3:nth-child(even){background:#fed;}
+.d4{padding: 0 7px;}
+
 #ajo0 .d3:hover{background: cyan;}
 header{margin:0 auto;text-align: center;max-width:666px;}
 .pec{
@@ -124,6 +126,7 @@ position: absolute;bottom:-3px;right:25px;}
 .want{margin:0 23px;display:inline-block;}
 
 .dd{width:16px; height:16px;}
+tt{color:blue; }
 	</style>
 
 </head>

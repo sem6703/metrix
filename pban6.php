@@ -45,11 +45,11 @@ $grz=rec($cu,"SELECT * FROM `grz` ORDER BY `nom` LIMIT ".(int)($pg*$sz+$koy).",1
 			
 		
 			$a['txt'].= $fote['img']." <tt>";
-			$a['txt'].= ($pg*$sz+$koy+1)."</tt> ".$grz['nom'];
+			$a['txt'].= ($pg*$sz+$koy+1)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";
 			}
 			else
 			{// id='dj1'
-			$a['txt']= "<div class='d3'> <tt>".($pg*$sz+$koy+1)."</tt> ".$grz['nom'];//
+			$a['txt']= "<div class='d3'> <tt>".($pg*$sz+$koy+1)."</tt> ".$grz['nom']."&nbsp;&nbsp;&nbsp;";//
 			}
    $d=mysqli_query($cu,"SELECT * FROM `ava` WHERE `g`='".
 		(int)$grz['id']."' ORDER BY `god`"); //все акты персоны

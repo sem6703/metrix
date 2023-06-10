@@ -25,10 +25,11 @@ table:nth-child(4n+3){border:3px solid purple;}
 <?php
 //header ("Content-Type: text/html; charset=utf-8");
 
+include 'var6.php';
 // вход тип акта
 // добавление акта
 
-$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{

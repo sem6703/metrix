@@ -18,3 +18,5 @@ $su_grz=mysqli_query($cu,"SELECT * FROM `grz` ORDER BY `nom`");while($i=mysqli_f
 substr($s,0,20)
 замена подстроки
 str_replace('<img', '<img class="dd" ', $fote['img']);
+кроссмодульные переменные
+include 'var6.php';

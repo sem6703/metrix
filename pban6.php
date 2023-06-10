@@ -1,9 +1,8 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
 
+include 'var6.php';
 
-
-$sz=11;//7;//5;//
 if (($_POST['g'])) $g=$_POST['g']; else $g=0;// група
 if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 
@@ -11,7 +10,7 @@ if (($_POST['ava'])) $avaid=$_POST['ava']; else $avaid=0;//
 	$a=array(xa=>'xaxaxa');
 
 //**********************************************************
-$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
 if (!$cu)
 	{
 		echo 'база ноу коннект';	

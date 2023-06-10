@@ -1,5 +1,7 @@
 <?php
 header ("Content-Type: text/html; charset=utf-8");
+
+include 'var6.php';
 ?>
 
 <!DOCTYPE html>
@@ -144,14 +146,13 @@ position: absolute;bottom:-3px;right:25px;}
 			<!--  -->
 <?php
 
-$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{
 //--------------------------------------------   
 	mysqli_query($cu,"SET NAMES utf8"); 
 //--------------------------------------------  
-	$sz=11;//7;//5;//
 	$su_grz=mysqli_query($cu,"SELECT * FROM `grz` ORDER BY `nom`"); //
 	$num=intval((mysqli_num_rows($su_grz)-1) / $sz);//замер базы в страницах	
 	
@@ -355,7 +356,9 @@ method="post" action="">
 <script>
 <?php
 if (isset($_GET['ava']))$avaid=$_GET['ava']; else $avaid=5;		
-$cu=mysqli_connect("127.0.0.1","root","","pet3");//$cu=mysqli_connect("127.0.0.1","root","","pet4");//
+
+$cu=mysqli_connect("127.0.0.1","root","",$cubd);// см в include 'var6.php'
+
 if (!$cu){
 	echo 'база ноу коннект';	
 }else{

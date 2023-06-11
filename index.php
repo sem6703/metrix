@@ -12,7 +12,7 @@ include 'var6.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAP///+zHquzFptWymNuFBv+cAP+gAL2HNtmtgEgzESEqM/KOA+uIAMFwAKxrFP+MAf1bE/+IAIJTF7pvBSEiIDgrF8tsAGk+CNdyANx3ANh9ANN/Df9vC/ZqEfaWAFA/KpNhHf+OAP+VAP/gjv/54frGf8xrAOWAALFiALFvFP+EAfuKBv+kANl/DWFLJ/+oAP+9Xvr//8/a5zItLcWoj8+cYbJqAWRKKf+lAP+VBf+iAH9SHQANQ/+PAGRFLLXC1MLIxxsiIktNS76mlbSUeYxWC+qJCTkyLO2NBv+WAfOOBf+pAIRQDAYVJ/368YKGg1lDQYFfYZyIdLKbkpplHSMrM2FLKLdyFviPBv+VA/iNBAANJD05MA4REXRPTrd7f3RmVLSdlJtoI4tdHjk2MP+aBP+dAP+UBf+mAAASKVdWTG90cw0RDol8fXpuX7iglJliFVRAJVhGK4FZH/+WA/qOB/+YAAAAIszHwTc8PxofKKaTirmLWXxMCHVHCItfIJViGv+eAP+hADtDVZafqXlSItOLKatgAC8kGNuEDumMEP+bAFNAJwAXQfmhOPL//9bW0cRrAMl0AHBEBPmSAP+SBbxyEV5HKf+zAP+KAP+lEP+pNsBuANdsAMhvAF88Bvx3CP+dBPmUAzUzMNF+DzEoJ6hpC41QAFE+H9OLK8qeakRAQf9dDvxrDuCACEk7JLJrBicvO7eSaQ0XIamZlenErbaejrd4IvyJBvl/CPmNBJxnH35vYbGYhM+ulJiCbwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAAACwAAAAAEAAQAAAI+wABAHCwIcUNgQgTCiTwgIMKHEYUKiwAocOKHEeqjInjJxGlRSJuATAQwQMLHUiskJHzR1ElUKxwATgg4UOLHUmulJkDaJGZUK1yCZwAwgUPJVjM0AnEyJIoV7oEUgjxoseSLGfqZGl0adSrXQAQVBABwwcTLWjsCDKDiRQsgQksjIjxo8mWNHcGOcpUKhaAAAoukIgRwwkXNXgIazIli5eABRhKyADypMsawo82nZrVawCDDCZmBIHihU0eQpA4oaLlC0ADDSdoCInypY2eQpE6par1CyGKGkOkgHGzx5AkT6psKbRBZEqYN3wOTfq0SiKAIlTEwOmDSGFAADs=">
 	
-	<title>Pet Metrix</title>
+	<title><?php echo $title; ?></title>
 	<style>
 
 *:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
@@ -135,7 +135,7 @@ tt{color:blue; }
 
 
 <header>
-	<h1 id="h1">Вымышленные Метрические книги.</h1>	
+	<h1 id="h1"><?php echo $h1; ?></h1>	
 	Условные обозначения: 
 	<b>R</b>-родился; R-родил; r-воспреемник новорожденного; 
 	<b>M</b>-вступил в брак; M-родитель новобрачного; m-свидетель на бракосочетании; 
